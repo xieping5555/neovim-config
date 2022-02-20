@@ -12,9 +12,19 @@ return require('packer').startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
-    use { 'ms-jpq/coq_nvim', run = 'python3 -m coq deps' }
-    use 'ms-jpq/coq.artifacts'
-    use 'ms-jpq/coq.thirdparty'
+    -- nvim-cmp
+    use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
+    use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
+    use 'hrsh7th/cmp-path'     -- { name = 'path' }
+    use 'hrsh7th/cmp-cmdline'  -- { name = 'cmdline' }
+    use 'hrsh7th/nvim-cmp'
+    -- vsnip
+    use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
+    use 'hrsh7th/vim-vsnip'
+    use 'rafamadriz/friendly-snippets'
+    -- lspkind
+    use 'onsails/lspkind-nvim'
+
     -- filetree
     use {
         'kyazdani42/nvim-tree.lua',
@@ -34,4 +44,9 @@ return require('packer').startup(function()
     }
     -- indent
     use { "lukas-reineke/indent-blankline.nvim" }
+    -- fuzzy finder
+    use {
+       'nvim-telescope/telescope.nvim',
+       requires = { {'nvim-lua/plenary.nvim'} }
+    }
 end)

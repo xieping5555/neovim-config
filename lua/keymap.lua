@@ -1,5 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true }
+local empty = {}
 
 -- base
 keymap('n', '<space>w', ':w<CR>', opts)
@@ -12,8 +13,12 @@ keymap('n', '<space>y', 'bve"+y', opts)
 keymap('n', '<space>p', 'bve"+p', opts)
 keymap('n', '<S-h>', '<Home>', opts)
 keymap('n', '<S-l>', '<End>', opts)
-keymap('v', '<S-h>', '<Home>', {silent = true})
-keymap('v', '<S-l>', '<End>', {silent = true})
+keymap('v', '<S-h>', '<Home>', empty)
+keymap('v', '<S-l>', '<End>', empty)
+keymap('v', '<leader>y', '"+yy', empty)
+keymap('v', '<leader>p', '"+p', empty)
+keymap('n', '<leader>y', '"+yy', empty)
+keymap('n', '<leader>p', '"+p', empty)
 
 -- nvim-tree
 keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
@@ -26,8 +31,8 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- barbar
-keymap('n', '<space>h', ':BufferPrevious<CR>', opts)
-keymap('n', '<space>l', ':BufferNext<CR>', opts)
+keymap('n', '<space>wh', ':BufferPrevious<CR>', opts)
+keymap('n', '<space>wl', ':BufferNext<CR>', opts)
 keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
 keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
 keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
