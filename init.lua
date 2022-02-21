@@ -1,5 +1,4 @@
 require("base")
 require("plugins")
 require("keymap")
-require("init")
 require("lsp/setup")

@@ -50,4 +50,6 @@ g.mapleader = "\\"
 
 -- cmd([[colorscheme darkblue]])
 -- cmd([[colorscheme everblush]])
-cmd([[colorscheme ayu]])
+-- cmd([[colorscheme dracula]])
+-- cmd([[colorscheme ayu]])
+cmd([[colorscheme onedark]])

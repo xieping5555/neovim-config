@@ -23,6 +23,7 @@ keymap('n', '<leader>p', '"+p', empty)
 -- nvim-tree
 keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 keymap('n', '<S-r>', ':NvimTreeRefresh<CR>', opts)
+keymap('n', '<leader>c', ':NvimTreeFocus<CR>', opts)
 
 -- window
 keymap('n', '<C-h>', '<C-w>h', opts)
@@ -31,8 +32,8 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- barbar
-keymap('n', '<space>wh', ':BufferPrevious<CR>', opts)
-keymap('n', '<space>wl', ':BufferNext<CR>', opts)
+keymap('n', 'wp', ':BufferPrevious<CR>', opts)
+keymap('n', 'wn', ':BufferNext<CR>', opts)
 keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
 keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
 keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
@@ -43,13 +44,13 @@ keymap('n', '<space>7', ':BufferGoto 7<CR>', opts)
 keymap('n', '<space>8', ':BufferGoto 8<CR>', opts)
 keymap('n', '<space>9', ':BufferGoto 9<CR>', opts)
 keymap('n', '<space>0', ':BufferLast<CR>', opts)
-keymap('n', '<space>c', ':BufferClose<CR>', opts)
+keymap('n', 'wc', ':BufferClose<CR>', opts)
 keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 keymap('n', '<C-p>', ':BufferPick<CR>', opts)
 
 -- toggleterm
 keymap('t', '<esc>', [[<C-\><C-n>]], opts)
-keymap('n', '<space>,', ':ToggleTerm<CR>', opts)
+keymap('n', '<space>\'', ':ToggleTerm<CR>', opts)
 
 -- telescope
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
@@ -58,4 +59,11 @@ keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fs', ':Telescope colorscheme<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 
--- lsp
+-- accelerated-js
+keymap('n', 'j', '<Plug>(accelerated_jk_gj)', empty)
+keymap('n', 'k', '<Plug>(accelerated_jk_gk)', empty)
+
+-- easy-align
+keymap('x', 'ga', '<Plug>(EasyAlign)', empty)
+keymap('n', 'ga', '<Plug>(EasyAlign)', empty)
+
