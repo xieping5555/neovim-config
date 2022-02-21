@@ -109,4 +109,12 @@ return require('packer').startup(function()
         'lewis6991/spellsitter.nvim',
         config = editorConf.spellchecker()
     }
+    -- git
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
+        config = editorConf.gitsigns()
+    }
 end)

@@ -22,7 +22,7 @@ keymap('n', '<leader>p', '"+p', empty)
 
 -- nvim-tree
 keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
-keymap('n', '<S-r>', ':NvimTreeRefresh<CR>', opts)
+-- keymap('n', '<S-r>', ':NvimTreeRefresh<CR>', opts)
 keymap('n', '<leader>c', ':NvimTreeFocus<CR>', opts)
 
 -- window
@@ -58,6 +58,7 @@ keymap('n', '<leader>fp', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fs', ':Telescope colorscheme<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
+keymap('n', '<leader>fr', ':Telescope grep_string<CR>', opts)
 
 -- accelerated-js
 keymap('n', 'j', '<Plug>(accelerated_jk_gj)', empty)

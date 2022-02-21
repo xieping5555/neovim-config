@@ -53,3 +53,4 @@ g.mapleader = "\\"
 -- cmd([[colorscheme dracula]])
 -- cmd([[colorscheme ayu]])
 cmd([[colorscheme onedark]])
+
