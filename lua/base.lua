@@ -1,3 +1,4 @@
+local dashboard = require 'editor.dashboard'
 local o = vim.o
 local g = vim.g
 local cmd = vim.api.nvim_command
@@ -37,8 +38,8 @@ o.swapfile = false
 -- 不要备份文件
 o.backup = false
 -- 背景颜色
-o.background = "dark"
--- o.background = "light"
+-- o.background = "dark"
+o.background = "light"
 o.hidden = true
 
 -- 保存时自动清除尾部空白符
@@ -47,10 +48,20 @@ cmd([[autocmd BufWritePre * :%s/\s\+$//e]])
 -- leader键配置
 g.mapleader = "\\"
 
-
 -- cmd([[colorscheme darkblue]])
 -- cmd([[colorscheme everblush]])
 -- cmd([[colorscheme dracula]])
--- cmd([[colorscheme ayu]])
-cmd([[colorscheme onedark]])
+vim.g.ayucolor = "dark"
+cmd([[colorscheme ayu]])
+-- cmd([[colorscheme onedark]])
+-- cmd([[colorscheme spaceduck]])
+-- cmd([[colorscheme shine]])
+-- cmd([[colorscheme srcery]])
+-- cmd([[colorscheme xcodelight]])
+-- cmd([[colorscheme duckbones]])
 
+vim.g.dashboard_default_executive ='telescope'
+vim.g.indentLine_fileTypeExclude = {'dashboard'}
+vim.g.dashboard_custom_header = dashboard.dashboard_custom_header9
+
+vim.g.preview_uml_url='http://localhost:8888'

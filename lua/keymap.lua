@@ -32,8 +32,8 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- barbar
-keymap('n', 'wp', ':BufferPrevious<CR>', opts)
-keymap('n', 'wn', ':BufferNext<CR>', opts)
+keymap('n', '<A-h>', ':BufferPrevious<CR>', opts)
+keymap('n', '<A-l>', ':BufferNext<CR>', opts)
 keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
 keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
 keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
@@ -44,7 +44,7 @@ keymap('n', '<space>7', ':BufferGoto 7<CR>', opts)
 keymap('n', '<space>8', ':BufferGoto 8<CR>', opts)
 keymap('n', '<space>9', ':BufferGoto 9<CR>', opts)
 keymap('n', '<space>0', ':BufferLast<CR>', opts)
-keymap('n', 'wc', ':BufferClose<CR>', opts)
+keymap('n', '<A-c>', ':BufferClose<CR>', opts)
 keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 keymap('n', '<C-p>', ':BufferPick<CR>', opts)
 
@@ -61,10 +61,18 @@ keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 keymap('n', '<leader>fr', ':Telescope grep_string<CR>', opts)
 
 -- accelerated-js
-keymap('n', 'j', '<Plug>(accelerated_jk_gj)', empty)
-keymap('n', 'k', '<Plug>(accelerated_jk_gk)', empty)
+--[[ keymap('n', 'j', '<Plug>(accelerated_jk_gj)', empty)
+keymap('n', 'k', '<Plug>(accelerated_jk_gk)', empty) ]]
 
 -- easy-align
 keymap('x', 'ga', '<Plug>(EasyAlign)', empty)
 keymap('n', 'ga', '<Plug>(EasyAlign)', empty)
 
+-- spectre
+keymap('n', '<leader>S', 'lua require("spectre").open()<CR>', opts)
+keymap('n', '<leader>sw', 'lua require("spectre").open_visual({select_word=true})<CR>', opts)
+keymap('n', '<leader>s', 'lua require("spectre").open_visual()<CR>', opts)
+keymap('n', '<leader>sp', 'lua require("spectre").open_file_search()<CR>', opts)
+
+-- go
+keymap('n', '<leader>tt', ':GoTestFunc<CR>', opts)
