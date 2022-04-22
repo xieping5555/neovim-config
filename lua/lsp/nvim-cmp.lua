@@ -3,10 +3,10 @@ local cmp = require 'cmp'
 
 local mapkey = function(cmp)
     return {
-        -- 上一个
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        -- 上一个，命令行模式和输入模式下有效
+        ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), {'i', 'c'}),
         -- 下一个
-        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), {'i', 'c'}),
         -- 出现补全
         ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
         -- 取消
@@ -47,7 +47,7 @@ cmp.setup {
     -- 来源
     sources = cmp.config.sources({
         {name = 'nvim_lsp'}, -- For vsnip users.
-        {name = 'vsnip'},
+        {name = 'vsnip'}
         -- {name = 'cmp_tabnine'}
         -- For luasnip users.
         -- { name = 'luasnip' },

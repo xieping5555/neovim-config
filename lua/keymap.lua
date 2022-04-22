@@ -1,5 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true }
+local opts = {noremap = true}
 local empty = {}
 
 -- base
@@ -32,8 +32,8 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- barbar
-keymap('n', '<A-h>', ':BufferPrevious<CR>', opts)
-keymap('n', '<A-l>', ':BufferNext<CR>', opts)
+keymap('n', '<Alt-h>', ':BufferPrevious<CR>', opts)
+keymap('n', '<Alt-l>', ':BufferNext<CR>', opts)
 keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
 keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
 keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
@@ -70,9 +70,17 @@ keymap('n', 'ga', '<Plug>(EasyAlign)', empty)
 
 -- spectre
 keymap('n', '<leader>S', 'lua require("spectre").open()<CR>', opts)
-keymap('n', '<leader>sw', 'lua require("spectre").open_visual({select_word=true})<CR>', opts)
-keymap('n', '<leader>s', 'lua require("spectre").open_visual()<CR>', opts)
+keymap('n', '<leader>sw',
+       'lua require("spectre").open_visual({select_word=true})<CR>', opts)
+keymap('n', '<space>s', 'lua require("spectre").open_visual()<CR>', opts)
 keymap('n', '<leader>sp', 'lua require("spectre").open_file_search()<CR>', opts)
 
 -- go
-keymap('n', '<leader>tt', ':GoTestFunc<CR>', opts)
+keymap('n', '<space>tt', ':GoTestFunc<CR>', opts)
+keymap('n', '<space>fs', ':GoFillStruct<CR>', opts)
+
+-- floaterm
+keymap('n', "<space>'", ':FloatermToggle! cd %:p:h<CR>', opts)
+
+-- maximizer
+keymap('n', "<C-m>", ':MaximizerToggle<CR>', opts)

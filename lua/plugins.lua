@@ -29,12 +29,23 @@ return require('packer').startup(function()
     use 'sainnhe/everforest'
     use 'cormacrelf/vim-colors-github'
     use 'arzg/vim-colors-xcode'
-    use 'whatyouhide/vim-gotham' -- lsp
+    use {'kyoz/purify', rtp = "vim"}
+    use 'yasukotelin/shirotelin'
+    use 'whatyouhide/vim-gotham'
+    use 'jsit/toast.vim'
+    use 'dunstontc/vim-vscode-theme'
+    use 'rhysd/vim-color-spring-night'
+    use 'ajgrf/parchment'
+    use 'NSBrianWard/Glacier-Remixes'
+    use 'lifepillar/vim-wwdc17-theme'
+
+    -- lsp
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     use {'ray-x/lsp_signature.nvim', config = lspConf.lsp_signature()}
     use 'L3MON4D3/LuaSnip'
-    use {'tami5/lspsaga.nvim', config = lspConf.lsp_saga()} use {
+    use {'tami5/lspsaga.nvim', config = lspConf.lsp_saga()}
+    use {
         'RishabhRD/nvim-lsputils',
         requires = {'RishabhRD/popfix'},
         config = lspConf.nvim_lsputils()
@@ -54,6 +65,8 @@ return require('packer').startup(function()
     --     run='./install.sh',
     --     requires = 'hrsh7th/nvim-cmp'
     -- }
+    -- copilot
+    -- use {'github/copilot.vim'}
     -- lsp progress
     use {'j-hui/fidget.nvim', config = lspConf.fidget()}
     -- golang
@@ -75,7 +88,8 @@ return require('packer').startup(function()
         config = editorConf.nvim_tree()
     }
     -- terminal
-    use {"akinsho/toggleterm.nvim", config = editorConf.toggleterm()}
+    -- use {"akinsho/toggleterm.nvim", config = editorConf.toggleterm()}
+    use 'voldikss/vim-floaterm'
     -- autopairs
     use {'windwp/nvim-autopairs', config = editorConf.autopairs()}
     -- tab
@@ -108,7 +122,7 @@ return require('packer').startup(function()
     -- thrift highlight
     use 'solarnz/thrift.vim'
     -- remove empty line at the end of the buffer
-    use { "McAuleyPenney/tidy.nvim", event = "BufWritePre" }
+    use {"McAuleyPenney/tidy.nvim", event = "BufWritePre"}
     -- dashboard
     use 'glepnir/dashboard-nvim'
     use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
@@ -117,4 +131,8 @@ return require('packer').startup(function()
     -- uml
     use 'skanehira/preview-uml.vim'
     use 'aklt/plantuml-syntax'
+    -- buffer max
+    use 'szw/vim-maximizer'
+    -- markdown
+    use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
 end)
