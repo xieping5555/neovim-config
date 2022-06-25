@@ -53,8 +53,8 @@ g.mapleader = "\\"
 -- cmd([[colorscheme darkblue]])
 -- cmd([[colorscheme everblush]])
 -- cmd([[colorscheme dracula]])
-vim.g.ayucolor = "mirage"
-cmd([[colorscheme ayu]])
+-- vim.g.ayucolor = "mirage"
+-- cmd([[colorscheme ayu]])
 -- cmd([[colorscheme onedark]])
 -- cmd([[colorscheme spaceduck]])
 -- cmd([[colorscheme shine]])
@@ -69,6 +69,7 @@ cmd([[colorscheme ayu]])
 -- cmd([[colorscheme github_light]])
 -- cmd([[colorscheme onedarkpro]])
 -- cmd([[colorscheme gruvbox]])
+cmd([[colorscheme blue-moon]])
 
 vim.g.dashboard_default_executive = 'telescope'
 vim.g.indentLine_fileTypeExclude = 'dashboard'

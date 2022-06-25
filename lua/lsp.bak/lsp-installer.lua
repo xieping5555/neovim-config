@@ -13,10 +13,11 @@ end
 
 -- Register a handler that will be called for all installed servers.
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
+-- 下载安装lsp server
 lsp_installer.on_server_ready(function(server)
     local opts = {
-        on_attach = require("user.lsp.handlers").on_attach,
-        capabilities = require("user.lsp.handlers").capabilities,
+        on_attach = require("lsp.handlers").on_attach,
+        capabilities = require("lsp.handlers").capabilities,
         flags = {debounce_text_changes = 150}
     }
 
