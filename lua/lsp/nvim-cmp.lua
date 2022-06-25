@@ -47,7 +47,7 @@ cmp.setup {
     -- 来源
     sources = cmp.config.sources({
         {name = 'nvim_lsp'}, -- For vsnip users.
-        {name = 'vsnip'}
+        {name = 'vsnip'}, {name = 'copilot'}
         -- {name = 'cmp_tabnine'}
         -- For luasnip users.
         -- { name = 'luasnip' },
@@ -56,7 +56,10 @@ cmp.setup {
         -- -- For snippy users.
         -- { name = 'snippy' },
     }, {{name = 'buffer'}, {name = 'path'}}),
-
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered()
+    },
     -- 快捷键
     mapping = mapkey(cmp),
     -- 使用lspkind-nvim显示类型图标

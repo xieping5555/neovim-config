@@ -32,21 +32,21 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- barbar
-keymap('n', '<Alt-h>', ':BufferPrevious<CR>', opts)
-keymap('n', '<Alt-l>', ':BufferNext<CR>', opts)
-keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
-keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
-keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
-keymap('n', '<space>4', ':BufferGoto 4<CR>', opts)
-keymap('n', '<space>5', ':BufferGoto 5<CR>', opts)
-keymap('n', '<space>6', ':BufferGoto 6<CR>', opts)
-keymap('n', '<space>7', ':BufferGoto 7<CR>', opts)
-keymap('n', '<space>8', ':BufferGoto 8<CR>', opts)
-keymap('n', '<space>9', ':BufferGoto 9<CR>', opts)
-keymap('n', '<space>0', ':BufferLast<CR>', opts)
-keymap('n', '<A-c>', ':BufferClose<CR>', opts)
-keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
-keymap('n', '<C-p>', ':BufferPick<CR>', opts)
+-- keymap('n', '<Alt-h>', ':BufferPrevious<CR>', opts)
+-- keymap('n', '<Alt-l>', ':BufferNext<CR>', opts)
+-- keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
+-- keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
+-- keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
+-- keymap('n', '<space>4', ':BufferGoto 4<CR>', opts)
+-- keymap('n', '<space>5', ':BufferGoto 5<CR>', opts)
+-- keymap('n', '<space>6', ':BufferGoto 6<CR>', opts)
+-- keymap('n', '<space>7', ':BufferGoto 7<CR>', opts)
+-- keymap('n', '<space>8', ':BufferGoto 8<CR>', opts)
+-- keymap('n', '<space>9', ':BufferGoto 9<CR>', opts)
+-- keymap('n', '<space>0', ':BufferLast<CR>', opts)
+-- keymap('n', '<A-c>', ':BufferClose<CR>', opts)
+-- keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
+-- keymap('n', '<C-p>', ':BufferPick<CR>', opts)
 
 -- toggleterm
 keymap('t', '<esc>', [[<C-\><C-n>]], opts)
@@ -69,11 +69,13 @@ keymap('x', 'ga', '<Plug>(EasyAlign)', empty)
 keymap('n', 'ga', '<Plug>(EasyAlign)', empty)
 
 -- spectre
-keymap('n', '<leader>S', 'lua require("spectre").open()<CR>', opts)
+keymap('n', '<leader>sr', ':lua require("spectre").open()<CR>', opts)
+-- search current word
 keymap('n', '<leader>sw',
-       'lua require("spectre").open_visual({select_word=true})<CR>', opts)
-keymap('n', '<space>s', 'lua require("spectre").open_visual()<CR>', opts)
-keymap('n', '<leader>sp', 'lua require("spectre").open_file_search()<CR>', opts)
+       ':lua require("spectre").open_visual({select_word=true})<CR>', opts)
+keymap('n', '<space>s', ':lua require("spectre").open_visual()<CR>', opts)
+-- search in current file
+keymap('n', '<leader>sp', ':lua require("spectre").open_file_search()<CR>', opts)
 
 -- go
 keymap('n', '<space>tt', ':GoTestFunc<CR>', opts)
@@ -84,3 +86,6 @@ keymap('n', "<space>'", ':FloatermToggle! cd %:p:h<CR>', opts)
 
 -- maximizer
 keymap('n', "<C-m>", ':MaximizerToggle<CR>', opts)
+
+-- 格式化代码
+keymap('n', "<C-s>", ":Neoformat<CR>", opts)

@@ -50,13 +50,12 @@ config.nvim_tree = function()
     }
     require("nvim-tree").setup {
 
-        disable_netrw = false,
+        disable_netrw = true,
         hijack_netrw = true,
         open_on_setup = true,
         ignore_ft_on_setup = {},
-        auto_close = false,
         auto_reload_on_write = true,
-        open_on_tab = true,
+        open_on_tab = false,
         hijack_cursor = false,
         update_cwd = false,
         hijack_unnamed_buffer_when_opening = true,
@@ -74,11 +73,11 @@ config.nvim_tree = function()
         filters = {dotfiles = false, custom = {}},
         git = {enable = true, ignore = true, timeout = 500},
         view = {
-            width = 40,
-            height = 30,
+            adaptive_size = true,
+            -- width = 40,
+            -- height = 30,
             hide_root_folder = false,
-            side = 'left',
-            auto_resize = false,
+            -- side = 'left',
             mappings = {custom_only = false, list = keylist},
             number = false,
             relativenumber = false,
@@ -91,8 +90,6 @@ config.nvim_tree = function()
         }
     }
 end
-
-config.toggleterm = function() require("toggleterm").setup {} end
 
 config.autopairs = function()
     require("nvim-autopairs").setup({})
@@ -108,7 +105,7 @@ end
 config.treesitter = function()
     require'nvim-treesitter.configs'.setup {
         -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-        ensure_installed = "maintained",
+        ensure_installed = "all",
 
         -- Install languages synchronously (only applied to `ensure_installed`)
         sync_install = false,
@@ -131,9 +128,6 @@ config.treesitter = function()
         }
     }
 end
-
-config.spellchecker =
-    function() require('spellsitter').setup {enable = true} end
 
 config.lualine = function()
     require('lualine').setup {
@@ -278,6 +272,140 @@ config.go = function()
     -- vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
     -- vim.cmd([[autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()]])
     -- vim.cmd([[autocmd BufWritePre (InsertLeave?) <buffer> lua vim.lsp.buf.formatting_sync(nil,500)]])
+end
+
+config.spectre = function()
+    require('spectre').setup({
+        color_devicons = true,
+        open_cmd = 'vnew',
+        live_update = false, -- auto excute search again when you write any file in vim
+        line_sep_start = '┌-----------------------------------------',
+        result_padding = '¦  ',
+        line_sep = '└-----------------------------------------',
+        highlight = {
+            ui = "String",
+            search = "DiffChange",
+            replace = "DiffDelete"
+        },
+        mapping = {
+            ['toggle_line'] = {
+                map = "dd",
+                cmd = "<cmd>lua require('spectre').toggle_line()<CR>",
+                desc = "toggle current item"
+            },
+            ['enter_file'] = {
+                map = "<cr>",
+                cmd = "<cmd>lua require('spectre.actions').select_entry()<CR>",
+                desc = "goto current file"
+            },
+            ['send_to_qf'] = {
+                map = "<leader>q",
+                cmd = "<cmd>lua require('spectre.actions').send_to_qf()<CR>",
+                desc = "send all item to quickfix"
+            },
+            ['replace_cmd'] = {
+                map = "<leader>c",
+                cmd = "<cmd>lua require('spectre.actions').replace_cmd()<CR>",
+                desc = "input replace vim command"
+            },
+            ['show_option_menu'] = {
+                map = "<leader>o",
+                cmd = "<cmd>lua require('spectre').show_options()<CR>",
+                desc = "show option"
+            },
+            ['run_replace'] = {
+                map = "<leader>R",
+                cmd = "<cmd>lua require('spectre.actions').run_replace()<CR>",
+                desc = "replace all"
+            },
+            ['change_view_mode'] = {
+                map = "<leader>v",
+                cmd = "<cmd>lua require('spectre').change_view()<CR>",
+                desc = "change result view mode"
+            },
+            ['toggle_live_update'] = {
+                map = "tu",
+                cmd = "<cmd>lua require('spectre').toggle_live_update()<CR>",
+                desc = "update change when vim write file."
+            },
+            ['toggle_ignore_case'] = {
+                map = "ti",
+                cmd = "<cmd>lua require('spectre').change_options('ignore-case')<CR>",
+                desc = "toggle ignore case"
+            },
+            ['toggle_ignore_hidden'] = {
+                map = "th",
+                cmd = "<cmd>lua require('spectre').change_options('hidden')<CR>",
+                desc = "toggle search hidden"
+            }
+            -- you can put your mapping here it only use normal mode
+        },
+        find_engine = {
+            -- rg is map with finder_cmd
+            ['rg'] = {
+                cmd = "rg",
+                -- default args
+                args = {
+                    '--color=never', '--no-heading', '--with-filename',
+                    '--line-number', '--column'
+                },
+                options = {
+                    ['ignore-case'] = {
+                        value = "--ignore-case",
+                        icon = "[I]",
+                        desc = "ignore case"
+                    },
+                    ['hidden'] = {
+                        value = "--hidden",
+                        desc = "hidden file",
+                        icon = "[H]"
+                    }
+                    -- you can put any rg search option you want here it can toggle with
+                    -- show_option function
+                }
+            },
+            ['ag'] = {
+                cmd = "ag",
+                args = {'--vimgrep', '-s'},
+                options = {
+                    ['ignore-case'] = {
+                        value = "-i",
+                        icon = "[I]",
+                        desc = "ignore case"
+                    },
+                    ['hidden'] = {
+                        value = "--hidden",
+                        desc = "hidden file",
+                        icon = "[H]"
+                    }
+                }
+            }
+        },
+        replace_engine = {
+            ['sed'] = {cmd = "sed", args = nil},
+            options = {
+                ['ignore-case'] = {
+                    value = "--ignore-case",
+                    icon = "[I]",
+                    desc = "ignore case"
+                }
+            }
+        },
+        default = {
+            find = {
+                -- pick one of item in find_engine
+                cmd = "rg",
+                options = {"ignore-case"}
+            },
+            replace = {
+                -- pick one of item in replace_engine
+                cmd = "sed"
+            }
+        },
+        replace_vim_cmd = "cdo",
+        is_open_target_win = true, -- open file on opener window
+        is_insert_mode = false -- start open panel on is_insert_mode
+    })
 end
 
 return config

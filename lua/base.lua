@@ -41,6 +41,8 @@ o.backup = false
 o.background = "dark"
 -- o.background = "light"
 o.hidden = true
+-- 新分割的窗口在右边
+o.splitright = true
 
 -- 保存时自动清除尾部空白符
 -- cmd([[autocmd BufWritePre * :%s/\s\+$//e]])
@@ -51,19 +53,22 @@ g.mapleader = "\\"
 -- cmd([[colorscheme darkblue]])
 -- cmd([[colorscheme everblush]])
 -- cmd([[colorscheme dracula]])
--- vim.g.ayucolor = "mirage"
--- cmd([[colorscheme ayu]])
+vim.g.ayucolor = "mirage"
+cmd([[colorscheme ayu]])
 -- cmd([[colorscheme onedark]])
 -- cmd([[colorscheme spaceduck]])
 -- cmd([[colorscheme shine]])
 -- cmd([[colorscheme srcery]])
 -- cmd([[colorscheme xcodelight]])
-cmd([[colorscheme duckbones]])
+-- cmd([[colorscheme duckbones]])
 -- cmd([[colorscheme gotham256]])
 -- cmd([[colorscheme gruvbox-baby]])
 -- cmd([[colorscheme shirotelin]])
 -- cmd([[colorscheme wwdc17]])
 -- cmd([[colorscheme OceanicNext]])
+-- cmd([[colorscheme github_light]])
+-- cmd([[colorscheme onedarkpro]])
+-- cmd([[colorscheme gruvbox]])
 
 vim.g.dashboard_default_executive = 'telescope'
 vim.g.indentLine_fileTypeExclude = 'dashboard'
@@ -76,4 +81,4 @@ vim.g.floaterm_position = 'botright'
 vim.g.floaterm_height = 20
 
 -- 保存时自动格式化go代码
-cmd([[au BufWritePre * undojoin | Neoformat]])
+-- cmd([[au BufWritePre * undojoin | Neoformat]])
