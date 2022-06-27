@@ -1,5 +1,5 @@
 require("base")
 require("plugins")
 require("keymap")
-require("lsp/setup")
-require("editor/bufferline")
+require "lsp"
+require "conf"

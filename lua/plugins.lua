@@ -2,9 +2,6 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-local editorConf = require 'editor.config'
-local lspConf = require 'lsp.config'
-
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -45,18 +42,17 @@ return require('packer').startup(function()
     use "projekt0n/github-nvim-theme"
     use 'kyazdani42/blue-moon'
     use 'ku-s-h/summerfruit256.vim'
+    use 'folke/lsp-colors.nvim'
+    use "savq/melange"
+    use 'rmehri01/onenord.nvim'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
-    use {'ray-x/lsp_signature.nvim', config = lspConf.lsp_signature()}
+    use {'ray-x/lsp_signature.nvim'}
     use 'L3MON4D3/LuaSnip'
-    use {'tami5/lspsaga.nvim', config = lspConf.lsp_saga()}
-    use {
-        'RishabhRD/nvim-lsputils',
-        requires = {'RishabhRD/popfix'},
-        config = lspConf.nvim_lsputils()
-    }
+    use {'tami5/lspsaga.nvim'}
+    use {'RishabhRD/nvim-lsputils', requires = {'RishabhRD/popfix'}}
     use 'github/copilot.vim'
     use {"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}}
     use {
@@ -76,37 +72,31 @@ return require('packer').startup(function()
             'rafamadriz/friendly-snippets', 'onsails/lspkind-nvim'
         }
     }
-    use {
-        'stevearc/aerial.nvim',
-        config = function() require('aerial').setup() end
-    }
+    -- code structure
+    use {'stevearc/aerial.nvim'}
     -- lsp progress
-    use {'j-hui/fidget.nvim', config = lspConf.fidget()}
+    use {'j-hui/fidget.nvim'}
     -- golang
-    use {'ray-x/go.nvim', config = editorConf.go()}
-    -- treesitter
-    use {'nvim-treesitter/nvim-treesitter', config = editorConf.treesitter()}
+    use {'ray-x/go.nvim'}
+    -- treesitter syntax highlight
+    use {'nvim-treesitter/nvim-treesitter'}
+    use 'nvim-treesitter/nvim-treesitter-context'
     -- status line
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true},
-        config = editorConf.lualine()
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     -- filetree
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
             'kyazdani42/nvim-web-devicons' -- optional, for file icon
-        },
-        config = editorConf.nvim_tree()
+        }
     }
     -- terminal
     use 'voldikss/vim-floaterm'
     -- autopairs
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use {"windwp/nvim-autopairs"}
     -- tab
     use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
     -- fuzzy finder
@@ -119,32 +109,20 @@ return require('packer').startup(function()
     -- easyalign
     use 'junegunn/vim-easy-align'
     -- comment
-    use {'numToStr/Comment.nvim', config = editorConf.comment()}
+    use {'numToStr/Comment.nvim'}
     -- tabout
-    use {'abecodes/tabout.nvim', config = editorConf.tabout()}
+    use {'abecodes/tabout.nvim'}
     -- neoformat
     use {'sbdchd/neoformat'}
     -- spellchecker
-    use {
-        'lewis6991/spellsitter.nvim',
-        config = function() require('spellsitter').setup {enable = true} end
-    }
+    use {'lewis6991/spellsitter.nvim'}
     -- git
-    use {
-        'lewis6991/gitsigns.nvim',
-        requires = {'nvim-lua/plenary.nvim'},
-        config = editorConf.gitsigns()
-    }
+    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     -- thrift highlight
     use 'solarnz/thrift.vim'
     -- remove empty line at the end of the buffer
-    use {
-        "mcauley-penney/tidy.nvim",
-        event = "BufWritePre",
-        config = function() require("tidy").setup() end
-    }
+    use "mcauley-penney/tidy.nvim"
     -- dashboard
-    -- use 'glepnir/dashboard-nvim'
     use {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}
     -- surround
     use 'tpope/vim-surround'
@@ -161,7 +139,7 @@ return require('packer').startup(function()
 
     -- search and replace
     use {'nvim-lua/plenary.nvim'}
-    use {'nvim-pack/nvim-spectre', config = editorConf.spectre()}
+    use {'nvim-pack/nvim-spectre'}
 
     -- debugger
     -- use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers

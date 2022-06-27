@@ -85,7 +85,7 @@ keymap('n', '<space>fs', ':GoFillStruct<CR>', opts)
 keymap('n', "<space>'", ':FloatermToggle! cd %:p:h<CR>', opts)
 
 -- maximizer
-keymap('n', "<C-m>", ':MaximizerToggle<CR>', opts)
+keymap('n', "<C-b>", ':MaximizerToggle<CR>', opts)
 
 -- 格式化代码
 keymap('n', "<C-s>", ":Neoformat<CR>", opts)

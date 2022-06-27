@@ -1,4 +1,3 @@
-local dashboard = require 'editor.dashboard'
 local o = vim.o
 local g = vim.g
 local cmd = vim.api.nvim_command
@@ -69,11 +68,8 @@ g.mapleader = "\\"
 -- cmd([[colorscheme github_light]])
 -- cmd([[colorscheme onedarkpro]])
 -- cmd([[colorscheme gruvbox]])
-cmd([[colorscheme blue-moon]])
-
-vim.g.dashboard_default_executive = 'telescope'
-vim.g.indentLine_fileTypeExclude = 'dashboard'
-vim.g.dashboard_custom_header = dashboard.dashboard_custom_header9
+-- cmd([[colorscheme blue-moon]])
+cmd([[colorscheme onenord]])
 
 vim.g.preview_uml_url = 'http://localhost:8888'
 
