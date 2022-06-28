@@ -42,7 +42,7 @@ end
 
 local function lsp_highlight_document(client)
     -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
+    if client.server_capabilities.document_highlight then
         vim.api.nvim_exec([[
       augroup lsp_document_highlight
         autocmd! * <buffer>
@@ -61,14 +61,18 @@ local function lsp_keymaps(bufnr)
                                 "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lh",
                                 "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>li", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>li",
+                                "<cmd>lua vim.lsp.buf.implementation()<CR>",
+                                opts)
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>rn",
                                 "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lr",
+                                "<cmd>lua vim.lsp.buf.references()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>ca",
                                 "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>of", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>of",
+                                "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>dj",
                                 '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>',
                                 opts)
@@ -87,7 +91,7 @@ M.on_attach = function(client, bufnr)
     lsp_highlight_document(client)
 
     -- add outline support for evey language
-    require("aerial").on_attach(client, bufnr)
+    require"aerial".on_attach(client, bufnr)
     require"lsp_signature".on_attach()
 
 end

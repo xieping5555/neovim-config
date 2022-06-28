@@ -21,7 +21,6 @@ return require('packer').startup(function()
     -- use 'sonph/onehalf'
     -- use 'kaicataldo/material.vim'
     -- use 'mhartington/oceanic-next'
-    -- use 'folke/tokyonight.nvim'
     -- use 'luisiacc/gruvbox-baby'
     -- use {'srcery-colors/srcery-vim', as = 'srcery'}
     -- use 'NLKNguyen/papercolor-theme'
@@ -45,6 +44,10 @@ return require('packer').startup(function()
     use 'folke/lsp-colors.nvim'
     use "savq/melange"
     use 'rmehri01/onenord.nvim'
+    use 'folke/tokyonight.nvim'
+    use 'nanotech/jellybeans.vim'
+    use 'jonathanfilip/vim-lucius'
+    use 'rakr/vim-two-firewatch'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -97,13 +100,19 @@ return require('packer').startup(function()
     use 'voldikss/vim-floaterm'
     -- autopairs
     use {"windwp/nvim-autopairs"}
-    -- tab
-    use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
+    -- bufferline
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v2.*",
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
+
     -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
+    use "nvim-telescope/telescope-file-browser.nvim"
     -- enhance jk move
     -- use 'rhysd/accelerated-jk'
     -- easyalign
@@ -142,9 +151,9 @@ return require('packer').startup(function()
     use {'nvim-pack/nvim-spectre'}
 
     -- debugger
-    -- use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
-    -- use "mfussenegger/nvim-dap"
-    -- use "theHamsta/nvim-dap-virtual-text"
-    -- use "rcarriga/nvim-dap-ui"
+    use "Pocco81/dap-buddy.nvim"
+    use "mfussenegger/nvim-dap"
+    use "theHamsta/nvim-dap-virtual-text"
+    use "rcarriga/nvim-dap-ui"
 
 end)

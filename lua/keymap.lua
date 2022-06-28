@@ -31,22 +31,20 @@ keymap('n', '<C-j>', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
--- barbar
--- keymap('n', '<Alt-h>', ':BufferPrevious<CR>', opts)
--- keymap('n', '<Alt-l>', ':BufferNext<CR>', opts)
--- keymap('n', '<space>1', ':BufferGoto 1<CR>', opts)
--- keymap('n', '<space>2', ':BufferGoto 2<CR>', opts)
--- keymap('n', '<space>3', ':BufferGoto 3<CR>', opts)
--- keymap('n', '<space>4', ':BufferGoto 4<CR>', opts)
--- keymap('n', '<space>5', ':BufferGoto 5<CR>', opts)
--- keymap('n', '<space>6', ':BufferGoto 6<CR>', opts)
--- keymap('n', '<space>7', ':BufferGoto 7<CR>', opts)
--- keymap('n', '<space>8', ':BufferGoto 8<CR>', opts)
--- keymap('n', '<space>9', ':BufferGoto 9<CR>', opts)
--- keymap('n', '<space>0', ':BufferLast<CR>', opts)
--- keymap('n', '<A-c>', ':BufferClose<CR>', opts)
--- keymap('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
--- keymap('n', '<C-p>', ':BufferPick<CR>', opts)
+-- bufferline
+keymap('n', '<C-j>', ':BufferLineCyclePrev<CR>', opts)
+keymap('n', '<C-k>', ':BufferLineCycleNext<CR>', opts)
+keymap('n', '<space>1', ':BufferLineGoToBuffer 1<CR>', opts)
+keymap('n', '<space>2', ':BufferLineGoToBuffer 2<CR>', opts)
+keymap('n', '<space>3', ':BufferLineGoToBuffer 3<CR>', opts)
+keymap('n', '<space>4', ':BufferLineGoToBuffer 4<CR>', opts)
+keymap('n', '<space>5', ':BufferLineGoToBuffer 5<CR>', opts)
+keymap('n', '<space>6', ':BufferLineGoToBuffer 6<CR>', opts)
+keymap('n', '<space>7', ':BufferLineGoToBuffer 7<CR>', opts)
+keymap('n', '<space>8', ':BufferLineGoToBuffer 8<CR>', opts)
+keymap('n', '<space>9', ':BufferLineGoToBuffer 9<CR>', opts)
+keymap('n', '<leader>x', ':BufferLinePickClose<CR>', opts)
+keymap('n', '<C-p>', ':BufferLinePick<CR>', opts)
 
 -- toggleterm
 keymap('t', '<esc>', [[<C-\><C-n>]], opts)
@@ -59,6 +57,7 @@ keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fs', ':Telescope colorscheme<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 keymap('n', '<leader>fr', ':Telescope grep_string<CR>', opts)
+keymap('n', '<leader>fB', ':Telescope file_browser<CR>', opts)
 
 -- accelerated-js
 --[[ keymap('n', 'j', '<Plug>(accelerated_jk_gj)', empty)
@@ -89,3 +88,21 @@ keymap('n', "<C-b>", ':MaximizerToggle<CR>', opts)
 
 -- 格式化代码
 keymap('n', "<C-s>", ":Neoformat<CR>", opts)
+
+-- debugger
+-- keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+-- keymap("n", "<leader>dB",
+--        "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>",
+--        opts)
+-- -- keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
+-- keymap("n", "<leader>dl", "lua require'dap'.run_last()<cr>", opts)
+-- keymap('n', '<F10>',
+--        '<cmd>lua require"user.dap.dap-util".reload_continue()<CR>', opts)
+-- keymap("n", "<F4>", "<cmd>lua require'dap'.terminate()<cr>", opts)
+-- keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
+-- keymap("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+-- keymap("n", "<F7>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+-- keymap("n", "<F8>", "<cmd>lua require'dap'.step_out()<cr>", opts)
+-- keymap(wn", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
+-- keymap("n", "<leader>dt", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+-- keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)

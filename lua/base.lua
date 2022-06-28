@@ -37,8 +37,8 @@ o.swapfile = false
 -- 不要备份文件
 o.backup = false
 -- 背景颜色
-o.background = "dark"
--- o.background = "light"
+-- o.background = "dark"
+o.background = "light"
 o.hidden = true
 -- 新分割的窗口在右边
 o.splitright = true
@@ -69,7 +69,10 @@ g.mapleader = "\\"
 -- cmd([[colorscheme onedarkpro]])
 -- cmd([[colorscheme gruvbox]])
 -- cmd([[colorscheme blue-moon]])
-cmd([[colorscheme onenord]])
+-- cmd([[colorscheme onenord]])
+-- cmd([[colorscheme tokyonight]])
+-- cmd([[colorscheme jellybeans]])
+cmd([[colorscheme two-firewatch]])
 
 vim.g.preview_uml_url = 'http://localhost:8888'
 
