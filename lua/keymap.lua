@@ -32,8 +32,8 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- bufferline
-keymap('n', '<C-j>', ':BufferLineCyclePrev<CR>', opts)
-keymap('n', '<C-k>', ':BufferLineCycleNext<CR>', opts)
+keymap('n', '<S-j>', ':BufferLineCyclePrev<CR>', opts)
+keymap('n', '<S-k>', ':BufferLineCycleNext<CR>', opts)
 keymap('n', '<space>1', ':BufferLineGoToBuffer 1<CR>', opts)
 keymap('n', '<space>2', ':BufferLineGoToBuffer 2<CR>', opts)
 keymap('n', '<space>3', ':BufferLineGoToBuffer 3<CR>', opts)

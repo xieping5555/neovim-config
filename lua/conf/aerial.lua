@@ -136,7 +136,7 @@ aerial.setup({
     -- useful for setting keymaps. takes a single `bufnr` argument.
     on_attach = function(bufnr)
         -- toggle the aerial window with <leader>a
-        -- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'o', '<cmd>aerialgo<cr>', {})
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>a', '<cmd>AerialToggle!<cr>', {})
     end,
 
     -- automatically open aerial when entering supported buffers.
@@ -220,4 +220,3 @@ aerial.setup({
         update_delay = 300
     }
 })
-
