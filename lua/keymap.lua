@@ -89,6 +89,8 @@ keymap('n', "<C-b>", ':MaximizerToggle<CR>', opts)
 -- 格式化代码
 keymap('n', "<C-s>", ":Neoformat<CR>", opts)
 
+-- 关闭quickfix窗口并回到编辑处
+keymap('n', "<C-q>", ":cclose<CR>", opts)
 -- debugger
 -- keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 -- keymap("n", "<leader>dB",

@@ -73,6 +73,8 @@ g.mapleader = "\\"
 -- cmd([[colorscheme tokyonight]])
 cmd([[colorscheme jellybeans]])
 -- cmd([[colorscheme two-firewatch]])
+-- vim.g.material_style = "ocean"
+-- cmd([[colorscheme material]])
 
 vim.g.preview_uml_url = 'http://localhost:8888'
 

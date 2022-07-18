@@ -36,10 +36,11 @@ aerial.setup({
     -- a list of all symbols to display. set to false to display all symbols.
     -- this can be a filetype map (see :help aerial-filetype-map)
     -- to see all available values, see :help symbolkind
-    filter_kind = {
-        "class", "constructor", "enum", "function", "interface", "module",
-        "method", "struct"
-    },
+    -- filter_kind = {
+    --     "class", "constructor", "enum", "function", "interface", "module",
+    --     "method", "struct"
+    -- },
+    filter_kind = false,
 
     -- enum: split_width, full_width, last, none
     -- determines line highlighting mode when multiple splits are visible.
@@ -136,7 +137,8 @@ aerial.setup({
     -- useful for setting keymaps. takes a single `bufnr` argument.
     on_attach = function(bufnr)
         -- toggle the aerial window with <leader>a
-        vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>a', '<cmd>AerialToggle!<cr>', {})
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>a',
+                                    '<cmd>AerialToggle!<cr>', {})
     end,
 
     -- automatically open aerial when entering supported buffers.

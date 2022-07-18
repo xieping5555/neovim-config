@@ -48,6 +48,9 @@ return require('packer').startup(function()
     use 'nanotech/jellybeans.vim'
     use 'jonathanfilip/vim-lucius'
     use 'rakr/vim-two-firewatch'
+    use 'w0ng/vim-hybrid'
+    use 'marko-cerovac/material.nvim'
+    use 'artanikin/vim-synthwave84'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -149,6 +152,8 @@ return require('packer').startup(function()
     -- search and replace
     use {'nvim-lua/plenary.nvim'}
     use {'nvim-pack/nvim-spectre'}
+
+    use 'sunjon/Shade.nvim'
 
     -- debugger
     use "Pocco81/dap-buddy.nvim"
