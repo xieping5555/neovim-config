@@ -52,7 +52,9 @@ keymap('n', '<space>\'', ':ToggleTerm<CR>', opts)
 
 -- telescope
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
-keymap('n', '<leader>fp', ':Telescope live_grep<CR>', opts)
+keymap('n', '<leader>fp',
+       ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+       opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fs', ':Telescope colorscheme<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
@@ -83,14 +85,13 @@ keymap('n', '<space>fs', ':GoFillStruct<CR>', opts)
 -- floaterm
 keymap('n', "<space>'", ':FloatermToggle! cd %:p:h<CR>', opts)
 
--- maximizer
-keymap('n', "<C-b>", ':MaximizerToggle<CR>', opts)
-
 -- 格式化代码
 keymap('n', "<C-s>", ":Neoformat<CR>", opts)
 
 -- 关闭quickfix窗口并回到编辑处
 keymap('n', "<C-q>", ":cclose<CR>", opts)
+
+keymap('n', "<CR>", ":MaximizerToggle!<CR>", opts)
 -- debugger
 -- keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 -- keymap("n", "<leader>dB",

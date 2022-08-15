@@ -7,50 +7,15 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     -- colorscheme
     use 'olimorris/onedarkpro.nvim'
-    use "EdenEast/nightfox.nvim"
-    use 'shaeinst/roshnivim-cs'
-    use 'rktjmp/lush.nvim'
-    use 'mangeshrex/everblush.vim'
     use 'ayu-theme/ayu-vim'
     use 'dracula/vim'
-    -- use 'joshdick/onedark.vim'
     use 'pineapplegiant/spaceduck'
     use 'Mangeshrex/uwu.vim'
     use 'mcchrish/zenbones.nvim'
     use 'morhetz/gruvbox'
-    -- use 'sonph/onehalf'
-    -- use 'kaicataldo/material.vim'
-    -- use 'mhartington/oceanic-next'
-    -- use 'luisiacc/gruvbox-baby'
-    -- use {'srcery-colors/srcery-vim', as = 'srcery'}
-    -- use 'NLKNguyen/papercolor-theme'
-    -- use 'rakr/vim-one'
-    -- use 'lifepillar/vim-solarized8'
-    -- use 'sainnhe/everforest'
-    -- use 'cormacrelf/vim-colors-github'
-    -- use 'arzg/vim-colors-xcode'
-    -- use {'kyoz/purify', rtp = "vim"}
-    -- use 'yasukotelin/shirotelin'
-    -- use 'whatyouhide/vim-gotham'
-    -- use 'jsit/toast.vim'
-    -- use 'dunstontc/vim-vscode-theme'
-    -- use 'rhysd/vim-color-spring-night'
-    -- use 'ajgrf/parchment'
-    -- use 'NSBrianWard/Glacier-Remixes'
-    use 'lifepillar/vim-wwdc17-theme'
     use "projekt0n/github-nvim-theme"
-    use 'kyazdani42/blue-moon'
-    use 'ku-s-h/summerfruit256.vim'
-    use 'folke/lsp-colors.nvim'
-    use "savq/melange"
-    use 'rmehri01/onenord.nvim'
-    use 'folke/tokyonight.nvim'
     use 'nanotech/jellybeans.vim'
-    use 'jonathanfilip/vim-lucius'
-    use 'rakr/vim-two-firewatch'
-    use 'w0ng/vim-hybrid'
     use 'marko-cerovac/material.nvim'
-    use 'artanikin/vim-synthwave84'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -113,7 +78,13 @@ return require('packer').startup(function()
     -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/plenary.nvim'}}
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {"nvim-telescope/telescope-live-grep-args.nvim"}
+        },
+        config = function()
+            require("telescope").load_extension("live_grep_args")
+        end
     }
     use "nvim-telescope/telescope-file-browser.nvim"
     -- enhance jk move
@@ -153,12 +124,19 @@ return require('packer').startup(function()
     use {'nvim-lua/plenary.nvim'}
     use {'nvim-pack/nvim-spectre'}
 
+    -- light up you window
     use 'sunjon/Shade.nvim'
 
+    -- better quickfix
+    use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+    use {'junegunn/fzf', run = function() vim.fn['fzf#install']() end}
+
     -- debugger
-    use "Pocco81/dap-buddy.nvim"
-    use "mfussenegger/nvim-dap"
-    use "theHamsta/nvim-dap-virtual-text"
-    use "rcarriga/nvim-dap-ui"
+    -- use "Pocco81/dap-buddy.nvim"
+    -- use "mfussenegger/nvim-dap"
+    -- use "theHamsta/nvim-dap-virtual-text"
+    -- use "rcarriga/nvim-dap-ui"
+    -- solidity
+    use 'tomlion/vim-solidity'
 
 end)
