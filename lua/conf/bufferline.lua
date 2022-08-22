@@ -7,7 +7,7 @@ end
 bufferline.setup({
     options = {
         mode = "buffers", -- set to "tabs" to only show tabpages instead
-        numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,buffer
         --- @deprecated, please specify numbers as a function to customize the styling
         -- number_style = "superscript", --| "subscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
         close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -17,7 +17,7 @@ bufferline.setup({
         -- NOTE: this plugin is designed with this icon in mind,
         -- and so changing this is NOT recommended, this is intended
         -- as an escape hatch for people who cannot bear it for whatever reason
-        indicator_icon = '▎',
+        icon = '▎',
         buffer_close_icon = '',
         modified_icon = '●',
         close_icon = '',
