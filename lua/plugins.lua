@@ -125,7 +125,7 @@ return require('packer').startup(function()
     use {'nvim-pack/nvim-spectre'}
 
     -- light up you window
-    use 'sunjon/Shade.nvim'
+    -- use 'sunjon/Shade.nvim'
 
     -- better quickfix
     use {'kevinhwang91/nvim-bqf', ft = 'qf'}
