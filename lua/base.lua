@@ -53,7 +53,7 @@ g.mapleader = "\\"
 -- cmd([[colorscheme everblush]])
 -- cmd([[colorscheme dracula]])
 -- vim.g.ayucolor = "mirage"
--- cmd([[colorscheme ayu]])
+cmd([[colorscheme ayu]])
 -- cmd([[colorscheme onedark]])
 -- cmd([[colorscheme spaceduck]])
 -- cmd([[colorscheme shine]])
@@ -65,7 +65,7 @@ g.mapleader = "\\"
 -- cmd([[colorscheme shirotelin]])
 -- cmd([[colorscheme wwdc17]])
 -- cmd([[colorscheme OceanicNext]])
-cmd([[colorscheme github_dark]])
+-- cmd([[colorscheme github_dark]])
 -- cmd([[colorscheme onedarkpro]])
 -- cmd([[colorscheme gruvbox]])
 -- cmd([[colorscheme blue-moon]])
