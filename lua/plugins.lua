@@ -17,6 +17,7 @@ return require('packer').startup(function()
     use 'nanotech/jellybeans.vim'
     use 'marko-cerovac/material.nvim'
     use 'catppuccin/nvim'
+    use 'rktjmp/lush.nvim'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -25,15 +26,15 @@ return require('packer').startup(function()
     use 'L3MON4D3/LuaSnip'
     use {'tami5/lspsaga.nvim'}
     use {'RishabhRD/nvim-lsputils', requires = {'RishabhRD/popfix'}}
-    use 'github/copilot.vim'
-    use {"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}}
-    use {
-        "zbirenbaum/copilot.lua",
-        event = {"VimEnter"},
-        config = function()
-            vim.defer_fn(function() require("copilot").setup() end, 100)
-        end
-    }
+    -- use 'github/copilot.vim'
+    -- use {"zbirenbaum/copilot-cmp", after = {"copilot.lua", "nvim-cmp"}}
+    -- use {
+    --     "zbirenbaum/copilot.lua",
+    --     event = {"VimEnter"},
+    --     config = function()
+    --         vim.defer_fn(function() require("copilot").setup() end, 100)
+    --     end
+    -- }
     -- nvim-cmp
     use {
         'hrsh7th/nvim-cmp',
@@ -61,6 +62,7 @@ return require('packer').startup(function()
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     -- filetree
+    use 'kyazdani42/nvim-web-devicons'
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {

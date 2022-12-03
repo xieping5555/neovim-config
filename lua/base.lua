@@ -75,6 +75,7 @@ cmd([[colorscheme ayu]])
 -- cmd([[colorscheme two-firewatch]])
 -- vim.g.material_style = "ocean"
 -- cmd([[colorscheme material]])
+-- cmd([[colorscheme catppuccin-latte]])
 
 vim.g.preview_uml_url = 'http://localhost:8888'
 
