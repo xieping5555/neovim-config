@@ -53,7 +53,7 @@ g.mapleader = "\\"
 -- cmd([[colorscheme everblush]])
 -- cmd([[colorscheme dracula]])
 -- vim.g.ayucolor = "mirage"
-cmd([[colorscheme ayu]])
+-- cmd([[colorscheme ayu]])
 -- cmd([[colorscheme onedark]])
 -- cmd([[colorscheme spaceduck]])
 -- cmd([[colorscheme shine]])
@@ -73,9 +73,12 @@ cmd([[colorscheme ayu]])
 -- cmd([[colorscheme tokyonight]])
 -- cmd([[colorscheme jellybeans]])
 -- cmd([[colorscheme two-firewatch]])
--- vim.g.material_style = "ocean"
+-- -- vim.g.material_style = "ocean"
 -- cmd([[colorscheme material]])
 -- cmd([[colorscheme catppuccin-latte]])
+-- cmd([[colorscheme catppuccin-mocha]])
+-- cmd([[colorscheme github_light_colorblind]])
+cmd([[colorscheme ayu-mirage]])
 
 vim.g.preview_uml_url = 'http://localhost:8888'
 

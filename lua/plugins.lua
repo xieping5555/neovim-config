@@ -18,6 +18,7 @@ return require('packer').startup(function()
     use 'marko-cerovac/material.nvim'
     use 'catppuccin/nvim'
     use 'rktjmp/lush.nvim'
+    use 'Shatur/neovim-ayu'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -100,8 +101,8 @@ return require('packer').startup(function()
     use {'numToStr/Comment.nvim'}
     -- tabout
     use {'abecodes/tabout.nvim'}
-    -- neoformat
-    use {'sbdchd/neoformat'}
+    -- -- neoformat
+    -- use {'sbdchd/neoformat'}
     -- spellchecker
     use {'lewis6991/spellsitter.nvim'}
     -- git

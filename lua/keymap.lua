@@ -86,7 +86,7 @@ keymap('n', '<space>fs', ':GoFillStruct<CR>', opts)
 keymap('n', "<space>'", ':FloatermToggle! cd %:p:h<CR>', opts)
 
 -- 格式化代码
-keymap('n', "<C-s>", ":Neoformat<CR>", opts)
+-- keymap('n', "<C-s>", ":Neoformat<CR>", opts)
 
 -- 关闭quickfix窗口并回到编辑处
 keymap('n', "<C-q>", ":cclose<CR>", opts)

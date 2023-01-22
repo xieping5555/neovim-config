@@ -20,7 +20,7 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
     if server == "gopls" then
         nvim_lsp.gopls.setup({
             on_attach = on_attach,
-            flags = {debounce_text_changes = 500},
+            flags = {debounce_text_changes = 500, allow_incremental_sync = false},
             capabilities = capabilities,
             cmd = {"gopls", "-remote=auto"},
             settings = {

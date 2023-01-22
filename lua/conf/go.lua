@@ -19,7 +19,7 @@ go.setup({
     -- false: do nothing
     -- if lsp_cfg is a table, merge table with with non-default gopls setup in go/lsp.lua, e.g.
     --   lsp_cfg = {settings={gopls={matcher='CaseInsensitive', ['local'] = 'your_local_module_path', gofumpt = true }}}
-    lsp_gofumpt = false, -- true: set default gofmt in gopls format to gofumpt
+    lsp_gofumpt = true, -- true: set default gofmt in gopls format to gofumpt
     lsp_on_attach = nil, -- nil: use on_attach function defined in go/lsp.lua,
     --      when lsp_cfg is true
     -- if lsp_on_attach is a function: use this function as on_attach function for gopls
@@ -45,6 +45,6 @@ go.setup({
     run_in_floaterm = true -- set to true to run in float window.
     -- float term recommand if you use richgo/ginkgo with terminal color
 })
--- vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
 -- vim.cmd([[autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()]])
 -- vim.cmd([[autocmd BufWritePre (InsertLeave?) <buffer> lua vim.lsp.buf.formatting_sync(nil,500)]])
