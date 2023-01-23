@@ -1,23 +1,28 @@
-local status_ok, mason = pcall(require, "mason")
-if not status_ok then
-    vim.notify("mason not found!")
-    return
-end
-
 local nvim_lsp = require("lspconfig")
 local mason_lsp = require("mason-lspconfig")
+local mason = require("mason")
+local lsp = require("lsp.lsp")
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-mason.setup()
-mason.setup({
-    ensure_installed = {
-        "lua-language-server", "gopls", "pyright", "bash-language-server"
-    }
-})
+local function on_attach(client, bufnr)
+    lsp.bind_keymap(bufnr)
+    lsp.highlight_document(client)
+end
 
-local on_attach = require("lsp.handlers").on_attach
-local capabilities = require("lsp.handlers").capabilities
+
+local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 for _, server in ipairs(mason_lsp.get_installed_servers()) do
-    if server == "gopls" then
+    if server == "sumneko_lua" then
+        nvim_lsp.sumneko_lua.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                Lua = {
+                    diagnostics = {globals = {"vim", "packer_plugins"}},
+                }
+            }
+        })
+    elseif server == "gopls" then
         nvim_lsp.gopls.setup({
             on_attach = on_attach,
             flags = {debounce_text_changes = 500, allow_incremental_sync = false},
@@ -39,25 +44,6 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
                 }
             }
         })
-    elseif server == "sumneko_lua" then
-        nvim_lsp.sumneko_lua.setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = {
-                Lua = {
-                    diagnostics = {globals = {"vim", "packer_plugins"}},
-                    workspace = {
-                        library = {
-                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                            [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true
-                        },
-                        maxPreload = 100000,
-                        preloadFileSize = 10000
-                    },
-                    telemetry = {enable = false}
-                }
-            }
-        })
     else
         nvim_lsp[server].setup({
             capabilities = capabilities,
@@ -65,3 +51,9 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
         })
     end
 end
+
+mason.setup({
+    ensure_installed = {
+        "lua-language-server", "gopls", "pyright", "bash-language-server"
+    }
+})

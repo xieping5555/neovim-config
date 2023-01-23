@@ -1,19 +1,4 @@
-require "conf.cmp"
-require "conf.tabout"
-require "conf.nvim-tree"
-require "conf.autopairs"
-require "conf.treesitter"
-require "conf.gitsigns"
-require "conf.spectre"
-require "conf.go"
-require "conf.comment"
-require "conf.aerial"
-require "conf.spellsitter"
-require "conf.notify"
-require "conf.preview-markdown"
-require "conf.treesitter-context"
-require "conf.maximizer"
-require "conf.tidy"
-require "conf.bufferline"
-require "conf.telescope"
--- require "conf.shade"
+require 'conf.nvim-tree'
+require 'conf.tabout'
+require 'conf.autopairs'
+require 'conf.comment'

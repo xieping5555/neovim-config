@@ -1,5 +1,0 @@
-require "dap.dap-ui"
-require "dap.dap-util"
-require "dap.dap-virtual-text"
-require "dap.dap-go"
-require "dap.dap-config"

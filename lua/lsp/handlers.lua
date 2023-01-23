@@ -91,9 +91,9 @@ M.on_attach = function(client, bufnr)
     lsp_highlight_document(client)
 
     -- add outline support for evey language
-    require("aerial").on_attach(client, bufnr)
-    require"lsp_signature".on_attach()
-    require("nvim-navic").attach(client, bufnr)
+    -- require("aerial").on_attach(client, bufnr)
+    -- require"lsp_signature".on_attach()
+    -- require("nvim-navic").attach(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

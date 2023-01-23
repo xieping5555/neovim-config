@@ -15,7 +15,7 @@ o.autoindent = true
 o.termguicolors = true
 o.t_Co = 256
 -- 突出显示当前行
-o.cursorline = true
+o.cursorline = false
 -- 显示括号匹配
 o.showmatch = true
 -- 搜索忽略大小写
@@ -49,42 +49,5 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
--- cmd([[colorscheme darkblue]])
--- cmd([[colorscheme everblush]])
--- cmd([[colorscheme dracula]])
--- vim.g.ayucolor = "mirage"
--- cmd([[colorscheme ayu]])
--- cmd([[colorscheme onedark]])
--- cmd([[colorscheme spaceduck]])
--- cmd([[colorscheme shine]])
--- cmd([[colorscheme srcery]])
--- cmd([[colorscheme xcodelight]])
--- cmd([[colorscheme duckbones]])
--- cmd([[colorscheme gotham256]])
--- cmd([[colorscheme gruvbox-baby]])
--- cmd([[colorscheme shirotelin]])
--- cmd([[colorscheme wwdc17]])
--- cmd([[colorscheme OceanicNext]])
--- cmd([[colorscheme github_dark]])
--- cmd([[colorscheme onedarkpro]])
--- cmd([[colorscheme gruvbox]])
--- cmd([[colorscheme blue-moon]])
--- cmd([[colorscheme onenord]])
--- cmd([[colorscheme tokyonight]])
--- cmd([[colorscheme jellybeans]])
--- cmd([[colorscheme two-firewatch]])
--- -- vim.g.material_style = "ocean"
--- cmd([[colorscheme material]])
--- cmd([[colorscheme catppuccin-latte]])
--- cmd([[colorscheme catppuccin-mocha]])
--- cmd([[colorscheme github_light_colorblind]])
-cmd([[colorscheme ayu-mirage]])
-
-vim.g.preview_uml_url = 'http://localhost:8888'
-
-vim.g.floaterm_wintype = 'split'
-vim.g.floaterm_position = 'botright'
-vim.g.floaterm_height = 20
-
--- 保存时自动格式化go代码
--- cmd([[au BufWritePre * undojoin | Neoformat]])
+g.ayucolor = "mirage"
+cmd[[colorscheme ayu]]

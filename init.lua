@@ -1,5 +1,5 @@
-require "base"
-require "plugins"
-require "keymap"
-require "lsp"
-require "conf"
+require 'plugins'
+require 'base'
+require 'keymap'
+require 'conf'
+require 'lsp'

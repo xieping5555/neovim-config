@@ -1,10 +1,4 @@
-local status_ok, comment = pcall(require, "Comment")
-if not status_ok then
-    vim.notify("Comment not found!")
-    return
-end
-
-comment.setup {
+require'Comment'.setup {
     ---Add a space b/w comment and the line
     ---@type boolean|fun():boolean
     padding = true,
