@@ -1,4 +1,8 @@
-require 'conf.nvim-tree'
-require 'conf.tabout'
-require 'conf.autopairs'
-require 'conf.comment'
+require("conf.nvim-tree")
+require("conf.tabout")
+require("conf.autopairs")
+require("conf.comment")
+require("conf.nvim-bqf")
+require("conf.telescope")
+require("conf.lualine")
+require("conf.bufferline")

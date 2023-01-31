@@ -1,4 +1,9 @@
-require 'lspconfig'
-require 'lsp.mason'
-require 'lsp.lsp'.setup()
-require 'lsp.handlers'.setup()
+require("lspconfig")
+require("lsp.mason")
+require("lsp.lsp-utils")
+require("lsp.lsp-signature")
+require("lsp.lsp-kind")
+require("lsp.cmp")
+require("lsp.fidget")
+require("lsp.null-ls")
+require("lsp.lsp").setup()

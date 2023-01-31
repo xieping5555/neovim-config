@@ -50,4 +50,4 @@ o.splitright = true
 g.mapleader = "\\"
 
 g.ayucolor = "mirage"
-cmd[[colorscheme ayu]]
+cmd([[colorscheme ayu]])
