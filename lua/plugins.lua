@@ -84,8 +84,10 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	use({ "ray-x/guihua.lua", run = "cd lua/fzy && make" })
+
 	-- golang
-	use({ "ray-x/go.nvim", require = { "ray-x/guihua.lua" } })
+	use({ "ray-x/go.nvim" })
 
 	-- remove empty line at the end of the buffer
 	use("mcauley-penney/tidy.nvim")
