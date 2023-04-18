@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
 
 	-- colorscheme
 	use("Luxed/ayu-vim")
+	use("rebelot/kanagawa.nvim")
 
 	-- syntax highlight
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -82,6 +83,9 @@ return require("packer").startup(function(use)
 			vim.fn["fzf#install"]()
 		end,
 	})
+
+	-- golang
+	use({ "ray-x/go.nvim", require = { "ray-x/guihua.lua" } })
 
 	-- remove empty line at the end of the buffer
 	use("mcauley-penney/tidy.nvim")

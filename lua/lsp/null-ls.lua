@@ -21,7 +21,7 @@ null_ls.setup({
 		-- Formatting ---------------------
 		formatting.stylua, -- lua formatting
 		formatting.shfmt, -- shell script formatting
-		formatting.prettier, -- markdown formatting
+		formatting.prettier, -- js formatting
 		formatting.goimports_reviser, -- golang formatting
 		formatting.goimports,
 		formatting.gofumpt,

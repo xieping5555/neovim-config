@@ -43,11 +43,9 @@ o.hidden = true
 -- 新分割的窗口在右边
 o.splitright = true
 
--- 保存时自动清除尾部空白符
--- cmd([[autocmd BufWritePre * :%s/\s\+$//e]])
-
 -- leader键配置
 g.mapleader = "\\"
 
 g.ayucolor = "mirage"
 cmd([[colorscheme ayu]])
+-- cmd([[colorscheme kanagawa]])
