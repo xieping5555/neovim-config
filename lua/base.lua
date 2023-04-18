@@ -49,3 +49,7 @@ g.mapleader = "\\"
 g.ayucolor = "mirage"
 cmd([[colorscheme ayu]])
 -- cmd([[colorscheme kanagawa]])
+--
+vim.g.floaterm_wintype = "split"
+vim.g.floaterm_position = "botright"
+vim.g.floaterm_height = 20
