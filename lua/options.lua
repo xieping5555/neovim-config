@@ -46,10 +46,10 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
-cmd([[colorscheme kanagawa-wave]])
+cmd([[colorscheme material-darker]])
 
 vim.g.floaterm_wintype = "split"
 vim.g.floaterm_position = "botright"
 vim.g.floaterm_height = 20
 
-vim.g.transparent_enable = true
+-- vim.g.transparent_enable = true

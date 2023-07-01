@@ -46,7 +46,8 @@ return require("packer").startup(function(use)
 	use({ "ellisonleao/gruvbox.nvim" })
 	use("shaunsingh/nord.nvim")
 	use("Mofiqul/dracula.nvim")
-
+	use({ "rose-pine/neovim", as = "rose-pine" })
+	use("marko-cerovac/material.nvim")
 	-- file tree
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -123,14 +124,6 @@ return require("packer").startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 	use("arkav/lualine-lsp-progress")
-	-- better quickfix
-	-- use({ "kevinhwang91/nvim-bqf", ft = "qf" })
-	-- use({
-	-- 	"junegunn/fzf",
-	-- 	run = function()
-	-- 		vim.fn["fzf#install"]()
-	-- 	end,
-	-- })
 
 	-- which key
 	use({
@@ -151,11 +144,12 @@ return require("packer").startup(function(use)
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
-	use("xiyaowong/transparent.nvim")
+	-- use("xiyaowong/transparent.nvim")
 
 	-- indent line
 	use({ "shellRaining/hlchunk.nvim" })
 
+	use({ "NeogitOrg/neogit", requires = "nvim-lua/plenary.nvim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
