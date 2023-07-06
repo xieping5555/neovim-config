@@ -42,7 +42,6 @@ keymap("n", "<S-r>", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>c", ":NvimTreeFindFile<CR>", opts)
 
 -- lspsaga
-keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
 keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 keymap("n", "<leader>gr", "<cmd>Lspsaga rename<CR>", opts)
 keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts)
@@ -57,7 +56,15 @@ keymap("n", "<leader>sw", "<cmd>Lspsaga show_workspace_diagnostics<CR>", opts)
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 keymap("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
+keymap("n", "<leader>at", "<cmd>Lspsaga outline<CR>", opts)
 
 -- floaterm
 keymap("n", "<space>'", ":FloatermToggle! cd %:p:h<CR>", opts)
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
+
+--zen mode
+keymap("n", "z", "<cmd>ZenMode<CR>", opts)
+
+-- search box
+keymap("n", "<leader>f", "<cmd>SearchBoxMatchAll<CR>", opts)
+keymap("n", "<leader>r", "<cmd>SearchBoxReplace<CR>", opts)

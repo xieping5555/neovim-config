@@ -150,6 +150,19 @@ return require("packer").startup(function(use)
 	use({ "shellRaining/hlchunk.nvim" })
 
 	use({ "NeogitOrg/neogit", requires = "nvim-lua/plenary.nvim" })
+
+	use("folke/zen-mode.nvim")
+
+	use("karb94/neoscroll.nvim")
+
+	use("anuvyklack/pretty-fold.nvim")
+
+	use({
+		"VonHeikemen/searchbox.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

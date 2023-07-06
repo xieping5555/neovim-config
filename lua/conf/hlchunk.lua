@@ -3,7 +3,9 @@ require("hlchunk").setup({
 		chars = { "│", "¦", "┆", "┊" },
 
 		style = {
-			"#8B00FF",
+			-- "#8B00FF",
+			"#40A9FF",
+			-- "#81FF95",
 		},
 	},
 	blank = {

@@ -197,6 +197,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/NeogitOrg/neogit"
   },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["neovim-ayu"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/neovim-ayu",
@@ -211,6 +216,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -267,10 +277,20 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["pretty-fold.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
+    url = "https://github.com/anuvyklack/pretty-fold.nvim"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["searchbox.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/searchbox.nvim",
+    url = "https://github.com/VonHeikemen/searchbox.nvim"
   },
   ["tabout.nvim"] = {
     loaded = true,
@@ -297,6 +317,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

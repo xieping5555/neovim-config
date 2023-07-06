@@ -46,7 +46,7 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
-cmd([[colorscheme material-darker]])
+cmd([[colorscheme ayu-mirage]])
 
 vim.g.floaterm_wintype = "split"
 vim.g.floaterm_position = "botright"
