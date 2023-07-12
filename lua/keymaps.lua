@@ -55,7 +55,7 @@ keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", opts)
 keymap("n", "<leader>sw", "<cmd>Lspsaga show_workspace_diagnostics<CR>", opts)
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-keymap("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
+keymap("n", "gf", "<cmd>Lspsaga finder<CR>", opts)
 keymap("n", "<leader>at", "<cmd>Lspsaga outline<CR>", opts)
 
 -- floaterm

@@ -50,7 +50,13 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
 		lspconfig.gopls.setup({
 			on_attach = on_attach,
 			flags = { debounce_text_changes = 500, allow_incremental_sync = false },
-			cmd = { "gopls", "-remote=auto", "-debug=localhost:8080" },
+			cmd = {
+				"gopls",
+				"-remote=auto",
+				"-debug=localhost:8080",
+				"-logfile=/home/xieping.ekko/gopls.log",
+				"-remote.logfile=/home/xieping.ekko/gopls.remote.log",
+			},
 			settings = {
 				gopls = {
 					memoryMode = "DegradeClosed",
