@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["candle-grey"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/candle-grey",
+    url = "https://github.com/aditya-azad/candle-grey"
+  },
   catppuccin = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -262,6 +267,16 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
+  ["nvim-tundra"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nvim-tundra",
+    url = "https://github.com/sam4llis/nvim-tundra"
+  },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -271,6 +286,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/navarasu/onedark.nvim"
+  },
+  ["oxocarbon.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
+    url = "https://github.com/nyoom-engineering/oxocarbon.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -282,10 +302,20 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["pretty-fold.nvim"] = {
+  preto = {
     loaded = true,
-    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/pretty-fold.nvim",
-    url = "https://github.com/anuvyklack/pretty-fold.nvim"
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/preto",
+    url = "https://github.com/ewilazarus/preto"
+  },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
+  },
+  ["rasmus.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/rasmus.nvim",
+    url = "https://github.com/kvrohit/rasmus.nvim"
   },
   ["rose-pine"] = {
     loaded = true,
@@ -296,6 +326,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/searchbox.nvim",
     url = "https://github.com/VonHeikemen/searchbox.nvim"
+  },
+  ["statuscol.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/statuscol.nvim",
+    url = "https://github.com/luukvbaal/statuscol.nvim"
   },
   ["tabout.nvim"] = {
     loaded = true,
@@ -311,6 +346,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
+  ["vim-colors-pencil"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/vim-colors-pencil",
+    url = "https://github.com/reedes/vim-colors-pencil"
+  },
+  ["vim-colors-plain"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/vim-colors-plain",
+    url = "https://github.com/andreypopp/vim-colors-plain"
+  },
+  ["vim-darkness"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/vim-darkness",
+    url = "https://github.com/Jorengarenar/vim-darkness"
   },
   ["vim-floaterm"] = {
     loaded = true,
@@ -337,8 +392,8 @@ try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\
 time([[Config for which-key.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd LuaSnip ]]
 vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd LuaSnip ]]
 vim.cmd [[ packadd cmp_luasnip ]]
 time([[Sequenced loading]], false)
 

@@ -48,6 +48,14 @@ return require("packer").startup(function(use)
 	use("Mofiqul/dracula.nvim")
 	use({ "rose-pine/neovim", as = "rose-pine" })
 	use("marko-cerovac/material.nvim")
+	use({ "nyoom-engineering/oxocarbon.nvim" })
+	use("sam4llis/nvim-tundra")
+	use("aditya-azad/candle-grey")
+	use("andreypopp/vim-colors-plain")
+	use("reedes/vim-colors-pencil")
+	use("Jorengarenar/vim-darkness")
+	use("ewilazarus/preto")
+	use("kvrohit/rasmus.nvim")
 	-- file tree
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -144,7 +152,7 @@ return require("packer").startup(function(use)
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
-	-- use("xiyaowong/transparent.nvim")
+	use("xiyaowong/transparent.nvim")
 
 	-- indent line
 	use({ "shellRaining/hlchunk.nvim" })
@@ -155,7 +163,13 @@ return require("packer").startup(function(use)
 
 	use("karb94/neoscroll.nvim")
 
-	use("anuvyklack/pretty-fold.nvim")
+	use({
+		"kevinhwang91/nvim-ufo",
+		requires = {
+			"kevinhwang91/promise-async",
+			"luukvbaal/statuscol.nvim",
+		},
+	})
 
 	use({
 		"VonHeikemen/searchbox.nvim",

@@ -32,16 +32,33 @@ local function on_attach(client, bufnr)
 	-- keymap(bufnr, "n", "ds", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	--
 	-- vim.cmd([[ command! Format execute ':lua vim.lsp.buf.formatting()' ]])
+	vim.api.nvim_create_autocmd("InsertEnter", {
+		buffer = bufnr,
+		callback = function()
+			vim.lsp.inlay_hint(bufnr, true)
+		end,
+		group = "lsp_augroup",
+	})
+	vim.api.nvim_create_autocmd("InsertLeave", {
+		buffer = bufnr,
+		callback = function()
+			vim.lsp.inlay_hint(bufnr, false)
+		end,
+		group = "lsp_augroup",
+	})
 
 	require("lsp_signature").on_attach()
 end
 
 for _, server in ipairs(mason_lsp.get_installed_servers()) do
-	if server == "sumneko_lua" then
-		lspconfig.sumneko_lua.setup({
+	if server == "lua_ls" then
+		lspconfig.lua_ls.setup({
 			on_attach = on_attach,
 			settings = {
 				Lua = {
+					hint = {
+						enable = true,
+					},
 					diagnostics = { globals = { "vim", "packer_plugins" } },
 				},
 			},
@@ -56,6 +73,8 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
 				"-debug=localhost:8080",
 				"-logfile=/home/xieping.ekko/gopls.log",
 				"-remote.logfile=/home/xieping.ekko/gopls.remote.log",
+				"-vv",
+				"-rpc.trace",
 			},
 			settings = {
 				gopls = {
@@ -69,6 +88,13 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
 					},
 					codelenses = {
 						generate = true,
+					},
+					hints = {
+						compositeLiteralFields = true,
+						assignVariableTypes = true,
+						constantValues = true,
+						parameterNames = true,
+						functionTypeParameters = true,
 					},
 				},
 			},

@@ -1,4 +1,13 @@
-require("lspsaga").setup({})
+require("lspsaga").setup({
+	lightbulb = {
+		enable = false,
+		sign = false,
+	},
+	code_action = {
+		show_server_name = true,
+		extend_gitsigns = false,
+	},
+})
 -- require("lspsaga").setup({
 -- 	-- defaults ...
 -- 	debug = false,

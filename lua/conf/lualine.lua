@@ -1,10 +1,11 @@
--- local ayu = require("lualine.themes.ayu")
--- ayu.normal.c.bg = "None"
+-- local a = require("lualine.themes.tundra")
+-- a.normal.c.bg = "None"
 
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
 		themes = "auto",
+		-- themes = "tundra",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		-- section_separators = { left = "", right = "" },

@@ -63,8 +63,12 @@ keymap("n", "<space>'", ":FloatermToggle! cd %:p:h<CR>", opts)
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
 
 --zen mode
-keymap("n", "z", "<cmd>ZenMode<CR>", opts)
+keymap("n", "<leader>z", "<cmd>ZenMode<CR>", opts)
 
 -- search box
 keymap("n", "<leader>f", "<cmd>SearchBoxMatchAll<CR>", opts)
 keymap("n", "<leader>r", "<cmd>SearchBoxReplace<CR>", opts)
+
+-- fold
+keymap("n", "zm", ":foldclose<CR>", opts)
+keymap("n", "zr", ":foldopen<CR>", opts)
