@@ -157,6 +157,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/leap.nvim",
@@ -287,6 +292,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/navarasu/onedark.nvim"
   },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
+  },
   ["oxocarbon.nvim"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
@@ -301,6 +311,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["poimandres.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/poimandres.nvim",
+    url = "https://github.com/olivercederborg/poimandres.nvim"
   },
   preto = {
     loaded = true,
@@ -372,6 +387,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
+  },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0" },
     loaded = true,
@@ -392,8 +412,8 @@ try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\
 time([[Config for which-key.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd LuaSnip ]]
+vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd cmp_luasnip ]]
 time([[Sequenced loading]], false)
 

@@ -60,7 +60,7 @@ keymap("n", "<leader>at", "<cmd>Lspsaga outline<CR>", opts)
 
 -- floaterm
 keymap("n", "<space>'", ":FloatermToggle! cd %:p:h<CR>", opts)
-keymap("t", "<esc>", [[<C-\><C-n>]], opts)
+keymap("t", "<esc><esc>", [[<C-\><C-n>]], opts)
 
 --zen mode
 keymap("n", "<leader>z", "<cmd>ZenMode<CR>", opts)
@@ -72,3 +72,6 @@ keymap("n", "<leader>r", "<cmd>SearchBoxReplace<CR>", opts)
 -- fold
 keymap("n", "zm", ":foldclose<CR>", opts)
 keymap("n", "zr", ":foldopen<CR>", opts)
+
+-- lazygit
+keymap("n", "<leader>gg", "<cmd>LazyGitCurrentFile<CR>", opts)

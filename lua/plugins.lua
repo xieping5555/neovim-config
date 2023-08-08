@@ -56,6 +56,11 @@ return require("packer").startup(function(use)
 	use("Jorengarenar/vim-darkness")
 	use("ewilazarus/preto")
 	use("kvrohit/rasmus.nvim")
+	use("Mofiqul/vscode.nvim")
+	use("nyoom-engineering/oxocarbon.nvim")
+	use("olimorris/onedarkpro.nvim")
+	use("olivercederborg/poimandres.nvim")
+
 	-- file tree
 	use({
 		"kyazdani42/nvim-tree.lua",
@@ -179,6 +184,15 @@ return require("packer").startup(function(use)
 	})
 
 	use("ggandor/leap.nvim")
+
+	use({
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
