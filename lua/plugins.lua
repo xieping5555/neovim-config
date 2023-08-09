@@ -57,7 +57,6 @@ return require("packer").startup(function(use)
 	use("ewilazarus/preto")
 	use("kvrohit/rasmus.nvim")
 	use("Mofiqul/vscode.nvim")
-	use("nyoom-engineering/oxocarbon.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("olivercederborg/poimandres.nvim")
 
@@ -190,6 +189,13 @@ return require("packer").startup(function(use)
 		-- optional for floating window border decoration
 		requires = {
 			"nvim-lua/plenary.nvim",
+		},
+	})
+
+	use({
+		"VonHeikemen/fine-cmdline.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
 		},
 	})
 

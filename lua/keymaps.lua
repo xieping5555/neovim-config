@@ -75,3 +75,6 @@ keymap("n", "zr", ":foldopen<CR>", opts)
 
 -- lazygit
 keymap("n", "<leader>gg", "<cmd>LazyGitCurrentFile<CR>", opts)
+
+-- fine-cmdline
+keymap("n", ":", "<cmd>FineCmdline<CR>", opts)

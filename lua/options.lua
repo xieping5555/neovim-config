@@ -37,8 +37,8 @@ o.swapfile = false
 -- 不要备份文件
 o.backup = false
 -- 背景颜色
--- o.background = "dark"
-o.background = "light"
+o.background = "dark"
+-- o.background = "light"
 o.hidden = true
 -- 新分割的窗口在右边
 o.splitright = true
@@ -46,7 +46,7 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
-cmd([[colorscheme kanagawa-wave]])
+cmd([[colorscheme gruvbox]])
 
 vim.g.floaterm_wintype = "split"
 vim.g.floaterm_position = "botright"
