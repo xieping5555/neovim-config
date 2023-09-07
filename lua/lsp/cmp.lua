@@ -27,6 +27,39 @@ local mapkey = function(cmp)
 	}
 end
 
+local borderstyle = {
+	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+}
+
+local symbolMap = {
+	Text = "󰉿",
+	Method = "󰆧",
+	Function = "󰊕",
+	Constructor = "",
+	Field = "󰜢",
+	Variable = "󰀫",
+	Class = "󰠱",
+	Interface = "",
+	Module = "",
+	Property = "󰜢",
+	Unit = "󰑭",
+	Value = "󰎠",
+	Enum = "",
+	Keyword = "󰌋",
+	Snippet = "",
+	Color = "󰏘",
+	File = "󰈙",
+	Reference = "󰈇",
+	Folder = "󰉋",
+	EnumMember = "",
+	Constant = "󰏿",
+	Struct = "󰙅",
+	Event = "",
+	Operator = "󰆕",
+	TypeParameter = "",
+}
+
 cmp_config = {
 	-- 指定 snippet 引擎
 	snippet = {
@@ -49,14 +82,23 @@ cmp_config = {
 		{ name = "path" }, -- For path completion
 	}),
 	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+		completion = borderstyle,
+		documentation = borderstyle,
+	},
+	view = {
+		docs = {
+			auto_open = true,
+		},
 	},
 	-- 快捷键
 	mapping = mapkey(cmp),
+	completion = {
+		completeopt = "menu,menuone,preview",
+	},
 	formatting = {
+		-- fields = { "kind", "abbr", "menu" },
 		format = lspkind.cmp_format({
-			mode = "symbol", -- show only symbol annotations
+			mode = "symbol_text", -- show only symbol annotations
 			maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
 			ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 

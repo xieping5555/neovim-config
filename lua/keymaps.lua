@@ -45,7 +45,7 @@ keymap("n", "<leader>c", ":NvimTreeFindFile<CR>", opts)
 keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
 keymap("n", "<leader>gr", "<cmd>Lspsaga rename<CR>", opts)
 keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts)
-keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+-- keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
 keymap("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>", opts)
 keymap("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>", opts)
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
@@ -77,4 +77,19 @@ keymap("n", "zr", ":foldopen<CR>", opts)
 keymap("n", "<leader>gg", "<cmd>LazyGitCurrentFile<CR>", opts)
 
 -- fine-cmdline
-keymap("n", ":", "<cmd>FineCmdline<CR>", opts)
+-- keymap("n", ":", "<cmd>FineCmdline<CR>", opts)
+
+-- go
+keymap("n", "<space>gr", "<cmd>GoRun<CR>", opts)
+keymap("n", "<space>gt", "<cmd>GoTestFunc<CR>", opts)
+keymap("n", "<space>gf", "<cmd>GoFillStruct<CR>", opts)
+keymap("n", "<space>ga", "<cmd>GoAddTag<CR>", opts)
+
+-- bufferline
+keymap("n", "<space>bb", "<cmd>BufferLinePick<CR>", opts)
+keymap("n", "<space>bc", "<cmd>BufferLinePickClose<CR>", opts)
+keymap("n", "<space>bco", "<cmd>BufferLineCloseOthers<CR>", opts)
+keymap("n", "<space>bcl", "<cmd>BufferLineCloseLeft<CR>", opts)
+keymap("n", "<space>bcr", "<cmd>BufferLineCloseRight<CR>", opts)
+keymap("n", "<space>bn", "<cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "<space>bp", "<cmd>BufferLineCyclePrev<CR>", opts)

@@ -59,6 +59,9 @@ return require("packer").startup(function(use)
 	use("Mofiqul/vscode.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("olivercederborg/poimandres.nvim")
+	use("Verf/deepwhite.nvim")
+	use("glepnir/zephyr-nvim")
+	use("savq/melange-nvim")
 
 	-- file tree
 	use({
@@ -110,7 +113,7 @@ return require("packer").startup(function(use)
 	use("onsails/lspkind.nvim")
 
 	use({
-		"glepnir/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		-- opt = true,
 		-- branch = "main",
 		-- event = "LspAttach",
@@ -161,8 +164,6 @@ return require("packer").startup(function(use)
 	-- indent line
 	use({ "shellRaining/hlchunk.nvim" })
 
-	use({ "NeogitOrg/neogit", requires = "nvim-lua/plenary.nvim" })
-
 	use("folke/zen-mode.nvim")
 
 	use("karb94/neoscroll.nvim")
@@ -193,12 +194,17 @@ return require("packer").startup(function(use)
 	})
 
 	use({
-		"VonHeikemen/fine-cmdline.nvim",
+		"ray-x/go.nvim",
 		requires = {
-			{ "MunifTanjim/nui.nvim" },
+			{ "ray-x/guihua.lua" },
 		},
 	})
 
+	use("yamatsum/nvim-cursorline")
+
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+
+	use("HiPhish/rainbow-delimiters.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

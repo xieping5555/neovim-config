@@ -65,11 +65,14 @@ require("nvim-tree").setup({
 	auto_reload_on_write = true,
 	git = { enable = true, ignore = true, timeout = 500 },
 	filters = { dotfiles = true, custom = {}, exclude = { ".gitignore" } },
+	renderer = {
+		root_folder_label = false,
+	},
 	view = {
 		adaptive_size = true,
 		-- width = 40,
 		-- height = 30,
-		hide_root_folder = false,
+		-- hide_root_folder = true,
 		side = "left",
 		number = false,
 		relativenumber = false,

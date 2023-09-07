@@ -14,11 +14,11 @@ local function on_attach(client, bufnr)
 	-- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	-- local opts = { noremap = true, silent = false }
-	-- local keymap = vim.api.nvim_buf_set_keymap
+	local opts = { noremap = true, silent = false }
+	local keymap = vim.api.nvim_buf_set_keymap
 	--
 	-- keymap(bufnr, "n", "gl", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	-- keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	-- keymap(bufnr, "n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	-- keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	-- keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
@@ -46,8 +46,6 @@ local function on_attach(client, bufnr)
 		end,
 		group = "lsp_augroup",
 	})
-
-	require("lsp_signature").on_attach()
 end
 
 for _, server in ipairs(mason_lsp.get_installed_servers()) do
@@ -109,9 +107,20 @@ end
 mason.setup({
 	ui = {
 		icons = {
-			package_installed = "✓",
-			package_pending = "➜",
-			package_uninstalled = "✗",
+			package_pending = " ",
+			package_installed = "󰄳 ",
+			package_uninstalled = " 󰚌",
+		},
+
+		keymaps = {
+			toggle_server_expand = "<CR>",
+			install_server = "i",
+			update_server = "u",
+			check_server_version = "c",
+			update_all_servers = "U",
+			check_outdated_servers = "C",
+			uninstall_server = "X",
+			cancel_installation = "<C-c>",
 		},
 	},
 	ensure_installed = {
