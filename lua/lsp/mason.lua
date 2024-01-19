@@ -32,20 +32,21 @@ local function on_attach(client, bufnr)
 	-- keymap(bufnr, "n", "ds", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	--
 	-- vim.cmd([[ command! Format execute ':lua vim.lsp.buf.formatting()' ]])
-	vim.api.nvim_create_autocmd("InsertEnter", {
-		buffer = bufnr,
-		callback = function()
-			vim.lsp.inlay_hint(bufnr, true)
-		end,
-		group = "lsp_augroup",
-	})
-	vim.api.nvim_create_autocmd("InsertLeave", {
-		buffer = bufnr,
-		callback = function()
-			vim.lsp.inlay_hint(bufnr, false)
-		end,
-		group = "lsp_augroup",
-	})
+	-- vim.lsp.inlay_hint(bufnr, true)
+	-- vim.api.nvim_create_autocmd("InsertEnter", {
+	-- 	buffer = bufnr,
+	-- 	callback = function()
+	-- 		vim.lsp.inlay_hint(bufnr, true)
+	-- 	end,
+	-- 	group = "lsp_augroup",
+	-- })
+	-- vim.api.nvim_create_autocmd("InsertLeave", {
+	-- 	buffer = bufnr,
+	-- 	callback = function()
+	-- 		vim.lsp.inlay_hint(bufnr, false)
+	-- 	end,
+	-- 	group = "lsp_augroup",
+	-- })
 end
 
 for _, server in ipairs(mason_lsp.get_installed_servers()) do

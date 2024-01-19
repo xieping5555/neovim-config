@@ -13,7 +13,7 @@ o.expandtab = true
 o.autoindent = true
 -- 开启主题配置
 o.termguicolors = true
-o.t_Co = 256
+-- o.t_Co = 256
 -- 突出显示当前行
 o.cursorline = false
 -- 显示括号匹配
@@ -37,8 +37,8 @@ o.swapfile = false
 -- 不要备份文件
 o.backup = false
 -- 背景颜色
-o.background = "dark"
--- o.background = "light"
+-- o.background = "dark"
+o.background = "light"
 o.hidden = true
 -- 新分割的窗口在右边
 o.splitright = true
@@ -46,10 +46,17 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
-cmd([[colorscheme onedark]])
+cmd([[colorscheme dracula]])
 
 vim.g.floaterm_wintype = "split"
 vim.g.floaterm_position = "botright"
 vim.g.floaterm_height = 20
 
 vim.g.transparent_enable = false
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	pattern = "*.thrift",
+	callback = function()
+		vim.cmd(" !thriftls -format -f % -w")
+	end,
+})

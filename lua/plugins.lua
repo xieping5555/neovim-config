@@ -56,12 +56,24 @@ return require("packer").startup(function(use)
 	use("Jorengarenar/vim-darkness")
 	use("ewilazarus/preto")
 	use("kvrohit/rasmus.nvim")
-	use("Mofiqul/vscode.nvim")
 	use("olimorris/onedarkpro.nvim")
 	use("olivercederborg/poimandres.nvim")
 	use("Verf/deepwhite.nvim")
 	use("glepnir/zephyr-nvim")
 	use("savq/melange-nvim")
+	-- use("ThemerCorp/themer.lua")
+	use({
+		"daltonmenezes/aura-theme",
+		rtp = "packages/neovim",
+		-- config = function()
+		-- 	vim.cmd("colorscheme aura-soft-dark") -- Or any Aura theme available
+		-- end,
+	})
+	use("Mofiqul/adwaita.nvim")
+	use("folke/tokyonight.nvim")
+	use("Mofiqul/vscode.nvim")
+	use("Th3Whit3Wolf/one-nvim")
+	use("scottmckendry/cyberdream.nvim")
 
 	-- file tree
 	use({
@@ -76,7 +88,7 @@ return require("packer").startup(function(use)
 
 	use("abecodes/tabout.nvim")
 
-	use({ "jose-elias-alvarez/null-ls.nvim", requires = {
+	use({ "nvimtools/none-ls.nvim", requires = {
 		"nvim-lua/plenary.nvim",
 	} })
 
@@ -159,7 +171,7 @@ return require("packer").startup(function(use)
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
-	use("xiyaowong/transparent.nvim")
+	-- use("xiyaowong/transparent.nvim")
 
 	-- indent line
 	use({ "shellRaining/hlchunk.nvim" })
@@ -205,6 +217,9 @@ return require("packer").startup(function(use)
 	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	use("HiPhish/rainbow-delimiters.nvim")
+
+	use({ "rainbowhxch/accelerated-jk.nvim" })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

@@ -1,5 +1,20 @@
 vim.opt.termguicolors = true
+
 require("bufferline").setup({
+	-- highlights = {
+	-- 	fill = {
+	-- 		bg = {
+	-- 			attribute = "bg",
+	-- 			highlight = "Pmenu",
+	-- 		},
+	-- 	},
+	-- 	background = {
+	-- 		bg = {
+	-- 			attribute = "bg",
+	-- 			highlight = "Pmenu",
+	-- 		},
+	-- 	},
+	-- },
 	options = {
 		offsets = {
 			{

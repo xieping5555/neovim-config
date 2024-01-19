@@ -8,7 +8,7 @@ local mapkey = function(cmp)
 		-- 下一个
 		["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
 		-- 出现补全
-		["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		["<C-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 		-- 取消
 		["<A-,>"] = cmp.mapping({
 			i = cmp.mapping.abort(),

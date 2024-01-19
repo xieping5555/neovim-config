@@ -67,6 +67,13 @@ require("nvim-tree").setup({
 	filters = { dotfiles = true, custom = {}, exclude = { ".gitignore" } },
 	renderer = {
 		root_folder_label = false,
+		highlight_opened_files = "all",
+		indent_width = 2,
+		icons = {
+			show = {
+				folder_arrow = false,
+			},
+		},
 	},
 	view = {
 		adaptive_size = true,

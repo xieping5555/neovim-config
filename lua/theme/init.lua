@@ -1,0 +1,6 @@
+require("theme.onedark")
+require("theme.github-theme")
+require("theme.cyberdream")
+require("theme.catppuccin")
+require("theme.onedarkpro")
+require("theme.tokyonight")

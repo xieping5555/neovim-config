@@ -22,7 +22,9 @@ null_ls.setup({
 		formatting.stylua, -- lua formatting
 		formatting.shfmt, -- shell script formatting
 		formatting.prettier, -- js formatting
+		formatting.gofumpt, -- golang formatting
 		formatting.goimports, -- golang formatting
+		-- formatting.golines,
 	},
 	-- 保存自动格式化
 	on_attach = function(client, bufnr)

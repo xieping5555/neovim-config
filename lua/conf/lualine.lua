@@ -4,8 +4,8 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		themes = "auto",
-		-- themes = "tundra",
+		-- themes = "",
+		themes = "ayu",
 		-- component_separators = { left = "", right = "" },
 		-- section_separators = { left = "", right = "" },
 		-- section_separators = { left = "", right = "" },

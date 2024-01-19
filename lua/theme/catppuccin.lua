@@ -19,7 +19,7 @@ require("catppuccin").setup({
 		comments = { "italic" }, -- Change the style of comments
 		conditionals = { "italic" },
 		loops = {},
-		functions = {},
+		functions = { "standout", "bold" },
 		keywords = {},
 		strings = {},
 		variables = {},
@@ -29,15 +29,30 @@ require("catppuccin").setup({
 		types = {},
 		operators = {},
 	},
-	color_overrides = {},
+	color_overrides = {
+		all = {
+			text = "#ffffff",
+		},
+		latte = {
+			base = "#ff0000",
+			mantle = "#242424",
+			crust = "#474747",
+		},
+		frappe = {},
+		macchiato = {},
+		mocha = {},
+	},
 	custom_highlights = {},
 	integrations = {
 		cmp = true,
 		gitsigns = true,
-		telescope = true,
-		notify = false,
-		mini = false,
 		nvimtree = true,
+		treesitter = true,
+		notify = false,
+		mini = {
+			enabled = true,
+			indentscope_color = "",
+		},
 		-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 	},
 })

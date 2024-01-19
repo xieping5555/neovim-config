@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -83,6 +83,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["accelerated-jk.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/accelerated-jk.nvim",
+    url = "https://github.com/rainbowhxch/accelerated-jk.nvim"
+  },
+  ["adwaita.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/adwaita.nvim",
+    url = "https://github.com/Mofiqul/adwaita.nvim"
+  },
+  ["aura-theme"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim",
+    url = "https://github.com/daltonmenezes/aura-theme"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -131,6 +146,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["cyberdream.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
   },
   ["deepwhite.nvim"] = {
     loaded = true,
@@ -247,6 +267,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
   },
+  ["none-ls.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
+  },
   ["nord.nvim"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nord.nvim",
@@ -256,11 +281,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -311,6 +331,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["one-nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/one-nvim",
+    url = "https://github.com/Th3Whit3Wolf/one-nvim"
   },
   ["onedark.nvim"] = {
     loaded = true,
@@ -392,10 +417,10 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["transparent.nvim"] = {
+  ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/transparent.nvim",
-    url = "https://github.com/xiyaowong/transparent.nvim"
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-colors-pencil"] = {
     loaded = true,
@@ -441,14 +466,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Runtimepath customization
+time([[Runtimepath customization]], true)
+vim.o.runtimepath = vim.o.runtimepath .. ",/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim"
+time([[Runtimepath customization]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd LuaSnip ]]
 vim.cmd [[ packadd nvim-cmp ]]
+vim.cmd [[ packadd LuaSnip ]]
 vim.cmd [[ packadd cmp_luasnip ]]
 time([[Sequenced loading]], false)
 
