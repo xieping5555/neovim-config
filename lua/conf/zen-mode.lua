@@ -1,4 +1,10 @@
-require("zen-mode").setup({
+local ok, zen_mode = pcall(require, "zen-mode")
+if not ok then
+	vim.notify("zen-mode not found")
+	return
+end
+
+zen_mode.setup({
 	window = {
 		backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
 		-- height and width can be:

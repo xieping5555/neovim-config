@@ -1,4 +1,10 @@
-require("neoscroll").setup({
+local ok, neoscroll = pcall(require, "neoscroll")
+if not ok then
+	vim.notify("neoscroll not found")
+	return
+end
+
+neoscroll.setup({
 	-- All these keys will be mapped to their corresponding default scrolling animation
 	mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>", "<C-y>", "<C-e>", "zt", "zz", "zb" },
 	hide_cursor = true, -- Hide cursor while scrolling

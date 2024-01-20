@@ -59,7 +59,13 @@ local function on_attach(bufnr)
 	vim.keymap.set("n", "<2-RightMouse>", api.tree.change_root_to_node, opts("CD"))
 end
 
-require("nvim-tree").setup({
+local ok, tree = pcall(require, "nvim-tree")
+if not ok then
+	vim.notify("nvim-tree not found")
+	return
+end
+
+tree.setup({
 	hijack_cursor = true,
 	-- open_on_setup = true, -- open tree when first open
 	auto_reload_on_write = true,

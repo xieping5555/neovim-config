@@ -1,4 +1,9 @@
-local null_ls = require("null-ls")
+local ok, null_ls = pcall(require, "null-ls")
+if not ok then
+	vim.notify("nill-ls not found")
+	return
+end
+
 local formatting = null_ls.builtins.formatting
 
 local lsp_formatting = function(bufnr)

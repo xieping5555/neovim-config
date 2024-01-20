@@ -1,4 +1,10 @@
-require("github-theme").setup({
+local ok, github_theme = pcall(require, "github-theme")
+if not ok then
+	vim.notify("github-theme not found")
+	return
+end
+
+github_theme.setup({
 	options = {
 		styles = { -- Style to be applied to different syntax groups
 			comments = "NONE", -- Value is any valid attr-list value `:help attr-list`

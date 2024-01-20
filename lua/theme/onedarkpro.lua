@@ -1,4 +1,9 @@
-require("onedarkpro").setup({
+local ok, onedarkpro = pcall(require, "onedarkpro")
+if not ok then
+	vim.notify("onedarkpro not found")
+	return
+end
+onedarkpro.setup({
 	styles = {
 		types = "bold",
 		methods = "bold",

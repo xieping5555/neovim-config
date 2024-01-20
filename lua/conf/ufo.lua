@@ -1,3 +1,9 @@
+local ok, ufo = pcall(require, "ufo")
+if not ok then
+	vim.notify("ufo not found")
+	return
+end
+
 vim.o.foldcolumn = "1" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
@@ -5,8 +11,8 @@ vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 -- these are "extra", change them as you like
-vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+vim.keymap.set("n", "zR", ufo.openAllFolds)
+vim.keymap.set("n", "zM", ufo.closeAllFolds)
 
 local handler = function(virtText, lnum, endLnum, width, truncate)
 	local newVirtText = {}
@@ -36,7 +42,7 @@ local handler = function(virtText, lnum, endLnum, width, truncate)
 	return newVirtText
 end
 
-require("ufo").setup({
+ufo.setup({
 	provider_selector = function(bufnr, filetype, buftype)
 		-- return ""
 		return { "treesitter", "indent" }

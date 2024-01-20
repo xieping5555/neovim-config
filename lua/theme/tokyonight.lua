@@ -1,4 +1,10 @@
-require("tokyonight").setup({
+local ok, tokyonight = pcall(require, "tokyonight")
+if not ok then
+	vim.notify("tokyonight not found")
+	return
+end
+
+tokyonight.setup({
 	-- your configuration comes here
 	-- or leave it empty to use the default settings
 	style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
