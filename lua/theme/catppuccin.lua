@@ -1,4 +1,10 @@
-require("catppuccin").setup({
+local ok, catppuccin = pcall(require, "catppuccin")
+if not ok then
+	vim.notify("catppuccin not found")
+	return
+end
+
+catppuccin.setup({
 	flavour = "mocha", -- latte, frappe, macchiato, mocha
 	background = { -- :h background
 		light = "latte",

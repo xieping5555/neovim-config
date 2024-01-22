@@ -37,8 +37,8 @@ o.swapfile = false
 -- 不要备份文件
 o.backup = false
 -- 背景颜色
--- o.background = "dark"
-o.background = "light"
+o.background = "dark"
+-- o.background = "light"
 o.hidden = true
 -- 新分割的窗口在右边
 o.splitright = true
@@ -46,7 +46,12 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
-cmd([[colorscheme dracula]])
+local colorscheme = "tokyonight"
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
+end
 
 vim.g.floaterm_wintype = "split"
 vim.g.floaterm_position = "botright"

@@ -126,14 +126,6 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvimdev/lspsaga.nvim",
-		-- opt = true,
-		-- branch = "main",
-		-- event = "LspAttach",
-		requires = {
-			{ "nvim-tree/nvim-web-devicons" },
-			--Please make sure you install markdown and markdown_inline parser
-			{ "nvim-treesitter/nvim-treesitter" },
-		},
 	})
 	-- Code snippet engine
 	use("L3MON4D3/LuaSnip")

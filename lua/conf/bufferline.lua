@@ -1,20 +1,12 @@
 vim.opt.termguicolors = true
 
-require("bufferline").setup({
-	-- highlights = {
-	-- 	fill = {
-	-- 		bg = {
-	-- 			attribute = "bg",
-	-- 			highlight = "Pmenu",
-	-- 		},
-	-- 	},
-	-- 	background = {
-	-- 		bg = {
-	-- 			attribute = "bg",
-	-- 			highlight = "Pmenu",
-	-- 		},
-	-- 	},
-	-- },
+local ok, bufferline = pcall(require, "bufferline")
+if not ok then
+	vim.notify("bufferline not found")
+	return
+end
+
+bufferline.setup({
 	options = {
 		offsets = {
 			{

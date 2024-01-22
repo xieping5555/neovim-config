@@ -1,5 +1,14 @@
-local cmp = require("cmp")
-local lspkind = require("lspkind")
+local ok, cmp = pcall(require, "cmp")
+if not ok then
+	vim.notify("cmp not found")
+	return
+end
+
+local ok2, lspkind = pcall(require, "lspkind")
+if not ok2 then
+	vim.notify("lspkind not found")
+	return
+end
 
 local mapkey = function(cmp)
 	return {

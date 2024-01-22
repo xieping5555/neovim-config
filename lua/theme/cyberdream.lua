@@ -1,4 +1,9 @@
-require("cyberdream").setup({
+local ok, cyberdream = pcall(require, "cyberdream")
+if not ok then
+	vim.notify("cyberdream not found")
+	return
+end
+cyberdream.setup({
 	-- Enable transparent background
 	transparent = true, -- Default: false
 

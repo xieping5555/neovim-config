@@ -1,7 +1,12 @@
 -- local a = require("lualine.themes.tundra")
 -- a.normal.c.bg = "None"
+local ok, lualine = pcall(require, "lualine")
+if not ok then
+	vim.notify("lualine not found")
+	return
+end
 
-require("lualine").setup({
+lualine.setup({
 	options = {
 		icons_enabled = true,
 		-- themes = "",

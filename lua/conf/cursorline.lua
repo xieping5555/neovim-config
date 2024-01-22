@@ -1,4 +1,10 @@
-require("nvim-cursorline").setup({
+local ok, cursorline = pcall(require, "nvim-cursorline")
+if not ok then
+	vim.notify("nvim-cursorline not found")
+	return
+end
+
+cursorline.setup({
 	cursorline = {
 		enable = true,
 		timeout = 0,

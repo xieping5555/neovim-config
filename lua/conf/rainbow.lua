@@ -1,8 +1,19 @@
-local rainbow_delimiters = require("rainbow-delimiters")
-require("rainbow-delimiters.setup")({
+local ok, rainbow = pcall(require, "rainbow-delimiters")
+if not ok then
+	vim.notify("rainbow-delimiters not found")
+	return
+end
+
+local ok2, rainbow_setup = pcall(require, "rainbow-delimiters.setup")
+if not ok2 then
+	vim.notify("rainbow-delimiters.setup not found")
+	return
+end
+
+rainbow_setup({
 	strategy = {
-		[""] = rainbow_delimiters.strategy["global"],
-		commonlisp = rainbow_delimiters.strategy["local"],
+		[""] = rainbow.strategy["global"],
+		commonlisp = rainbow.strategy["local"],
 	},
 	query = {
 		[""] = "rainbow-delimiters",
