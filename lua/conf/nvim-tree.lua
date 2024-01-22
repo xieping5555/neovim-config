@@ -70,7 +70,7 @@ tree.setup({
 	-- open_on_setup = true, -- open tree when first open
 	auto_reload_on_write = true,
 	git = { enable = true, ignore = true, timeout = 500 },
-	filters = { dotfiles = true, custom = {}, exclude = { ".gitignore" } },
+	filters = { dotfiles = true, custom = {}, exclude = { ".gitignore", ".zshrc", ".tmux.conf", ".alacritty.yml" } },
 	renderer = {
 		root_folder_label = false,
 		highlight_opened_files = "all",
