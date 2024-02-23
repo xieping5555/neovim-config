@@ -74,6 +74,7 @@ return require("packer").startup(function(use)
 	use("Mofiqul/vscode.nvim")
 	use("Th3Whit3Wolf/one-nvim")
 	use("scottmckendry/cyberdream.nvim")
+	use("neanias/everforest-nvim")
 
 	-- file tree
 	use({
@@ -124,9 +125,7 @@ return require("packer").startup(function(use)
 
 	use("onsails/lspkind.nvim")
 
-	use({
-		"nvimdev/lspsaga.nvim",
-	})
+	use("nvimdev/lspsaga.nvim")
 	-- Code snippet engine
 	use("L3MON4D3/LuaSnip")
 	use({ "saadparwaiz1/cmp_luasnip", after = { "nvim-cmp", "LuaSnip" } })
