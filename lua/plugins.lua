@@ -55,14 +55,24 @@ return require("lazy").setup({
 		},
 	},
 
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{
+		"ray-x/go.nvim",
+		dependencies = {
+			{ "ray-x/guihua.lua" },
+		},
+	},
+
+	{ "nvim-treesitter/nvim-treesitter" },
 	"nvim-treesitter/nvim-treesitter-context",
 
 	"abecodes/tabout.nvim",
 
-	{ "nvimtools/none-ls.nvim", dependencies = {
-		"nvim-lua/plenary.nvim",
-	} },
+	{
+		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
 
 	-- fuzzy finder
 	{
@@ -99,7 +109,7 @@ return require("lazy").setup({
 	"nvimdev/lspsaga.nvim",
 	-- Code snippet engine
 	"L3MON4D3/LuaSnip",
-	{ "saadparwaiz1/cmp_luasnip" },
+	"saadparwaiz1/cmp_luasnip",
 
 	-- lsp loading progress
 	-- use({ "j-hui/fidget.nvim", tag = "legacy" })
@@ -136,7 +146,7 @@ return require("lazy").setup({
 	-- use("xiyaowong/transparent.nvim")
 
 	-- indent line
-	{ "shellRaining/hlchunk.nvim" },
+	"shellRaining/hlchunk.nvim",
 
 	"folke/zen-mode.nvim",
 
@@ -167,18 +177,14 @@ return require("lazy").setup({
 		},
 	},
 
-	{
-		"ray-x/go.nvim",
-		dependencies = {
-			{ "ray-x/guihua.lua" },
-		},
-	},
-
 	"yamatsum/nvim-cursorline",
 
-	{ "akinsho/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
+	{
+		"akinsho/bufferline.nvim",
+		dependencies = "nvim-tree/nvim-web-devicons",
+	},
 
 	"HiPhish/rainbow-delimiters.nvim",
 
-	{ "rainbowhxch/accelerated-jk.nvim" },
+	"rainbowhxch/accelerated-jk.nvim",
 }, {})
