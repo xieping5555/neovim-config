@@ -85,9 +85,9 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
 						unusedparams = true,
 						unusewrites = true,
 					},
-					codelenses = {
-						generate = true,
-					},
+					-- codelenses = {
+					-- 	generate = true,
+					-- },
 					hints = {
 						compositeLiteralFields = true,
 						assignVariableTypes = true,

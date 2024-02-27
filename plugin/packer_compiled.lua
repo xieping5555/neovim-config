@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?/init.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?.lua;/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/data00/home/xieping.ekko/.cache/nvim/packer_hererocks/2.1.1707061634/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -481,8 +481,8 @@ try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\
 time([[Config for which-key.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd LuaSnip ]]
+vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd cmp_luasnip ]]
 time([[Sequenced loading]], false)
 
