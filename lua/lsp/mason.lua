@@ -132,5 +132,5 @@ mason_lsp.setup({
 })
 
 mason_null_ls.setup({
-	ensure_installed = { "stylua", "goimports", "gofumt", "shfmt", "golangci-lint", "prettier" },
+	ensure_installed = { "stylua", "goimports", "gofumt", "shfmt", "golangci-lint" },
 })
