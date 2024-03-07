@@ -37,8 +37,8 @@ o.swapfile = false
 -- 不要备份文件
 o.backup = false
 -- 背景颜色
--- o.background = "dark"
-o.background = "light"
+o.background = "dark"
+-- o.background = "light"
 o.hidden = true
 -- 新分割的窗口在右边
 o.splitright = true
@@ -46,7 +46,7 @@ o.splitright = true
 -- leader键配置
 g.mapleader = "\\"
 
-local colorscheme = "github_light"
+local colorscheme = "nord"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
 	vim.notify("colorscheme " .. colorscheme .. " not found!")
@@ -66,14 +66,14 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	end,
 })
 
-vim.g.clipboard = {
-	name = "OSC 52",
-	copy = {
-		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-	},
-	paste = {
-		["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-		["*"] = require("vim.ui.clipboard.osc52").paste("*"),
-	},
-}
+-- vim.g.clipboard = {
+-- 	name = "OSC 52",
+-- 	copy = {
+-- 		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+-- 		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+-- 	},
+-- 	paste = {
+-- 		["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+-- 		["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+-- 	},
+-- }

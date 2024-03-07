@@ -267,6 +267,11 @@ _G.packer_plugins = {
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/neovim-ayu",
     url = "https://github.com/Shatur/neovim-ayu"
   },
+  ["night-owl.nvim"] = {
+    loaded = true,
+    path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/night-owl.nvim",
+    url = "https://github.com/oxfist/night-owl.nvim"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/data00/home/xieping.ekko/.local/share/nvim/site/pack/packer/start/nightfox.nvim",

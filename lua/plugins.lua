@@ -75,6 +75,7 @@ return require("packer").startup(function(use)
 	use("Th3Whit3Wolf/one-nvim")
 	use("scottmckendry/cyberdream.nvim")
 	use("neanias/everforest-nvim")
+	use("oxfist/night-owl.nvim")
 
 	-- file tree
 	use({

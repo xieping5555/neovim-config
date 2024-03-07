@@ -25,7 +25,8 @@ catppuccin.setup({
 		comments = { "italic" }, -- Change the style of comments
 		conditionals = { "italic" },
 		loops = {},
-		functions = { "standout", "bold" },
+		-- functions = { "standout", "bold" },
+		functions = {},
 		keywords = {},
 		strings = {},
 		variables = {},
