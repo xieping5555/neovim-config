@@ -2,6 +2,7 @@
 local mason = require("mason")
 local mason_lsp = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
+local mason_null_ls = require("mason-null-lsp")
 
 -- Set different settings for different languages' LSP
 -- LSP list: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
@@ -124,10 +125,12 @@ mason.setup({
 			cancel_installation = "<C-c>",
 		},
 	},
-	ensure_installed = {
-		"lua_ls",
-		"gopls",
-		"pylsp",
-		"bashls",
-	},
+})
+
+mason_lsp.setup({
+	ensure_installed = { "lua_ls", "gopls", "bash-language-server", "python-language-server" },
+})
+
+mason_null_ls.setup({
+	ensure_installed = { "stylua", "goimports", "gofumt", "shfmt", "golangci-lint", "prettier" },
 })

@@ -88,6 +88,7 @@ return require("lazy").setup({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
+		"jay-babu/mason-null-ls.nvim",
 	},
 
 	-- lsp
