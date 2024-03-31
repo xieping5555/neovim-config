@@ -72,12 +72,11 @@ for _, server in ipairs(mason_lsp.get_installed_servers()) do
 				"-debug=localhost:8080",
 				-- "-logfile=/home/xieping.ekko/gopls.log",
 				-- "-remote.logfile=/home/xieping.ekko/gopls.remote.log",
-				"-vv",
-				"-rpc.trace",
+				-- "-vv",
+				-- "-rpc.trace",
 			},
 			settings = {
 				gopls = {
-					memoryMode = "DegradeClosed",
 					usePlaceholders = false,
 					analyses = {
 						nilness = true,

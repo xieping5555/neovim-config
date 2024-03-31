@@ -56,6 +56,7 @@ end
 vim.g.floaterm_wintype = "split"
 vim.g.floaterm_position = "botright"
 vim.g.floaterm_height = 20
+vim.g.floaterm_shell = "zsh"
 
 vim.g.transparent_enable = false
 
