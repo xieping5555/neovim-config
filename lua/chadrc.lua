@@ -19,10 +19,14 @@ M.ui = {
         signature = true,
     },
 
-    transparency = true,
+    transparency = false,
 
     nvdash = {
         load_on_startup = false,
+    },
+
+    statusline = {
+        theme = "default",
     },
 }
 
