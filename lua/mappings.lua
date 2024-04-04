@@ -54,7 +54,7 @@ map("n", "<leader>c", "<cmd>NvimTreeFocus<CR>", { desc = "Nvimtree Focus window"
 map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 map("n", "<leader>gr", "<cmd>Lspsaga rename<CR>")
 map("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
--- keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+map("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 map("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
 map("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>")
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>")
