@@ -80,7 +80,7 @@ return {
     },
     {
         "kdheepak/lazygit.nvim",
-        lazy = false,
+        cmd = { "LazyGitCurrentFile", "LazyGit" },
     },
     {
         "abecodes/tabout.nvim",
@@ -98,5 +98,9 @@ return {
         config = function(_, opts)
             require("lsp_signature").setup(opts)
         end,
+    },
+    {
+        "sindrets/diffview.nvim",
+        cmd = { "DiffViewOpen" },
     },
 }

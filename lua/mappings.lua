@@ -39,7 +39,8 @@ map("n", "<C-Left>", ":vertical resize -2<CR>")
 map("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- lazygit
-map("n", "<leader>gg", "<cmd>LazyGitCurrentFile<CR>")
+map("n", "<leader>gg", "<cmd>LazyGit<CR>")
+map("n", "<leader>gf", "<cmd>LazyGitFilter<CR>")
 
 -- term
 map({ "n", "t" }, "<space>'", function()
