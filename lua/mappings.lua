@@ -67,3 +67,7 @@ map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
 map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 map("n", "gf", "<cmd>Lspsaga finder<CR>")
 map("n", "<leader>at", "<cmd>Lspsaga outline<CR>")
+
+-- diffview
+map("n", "<leader>do", "<cmd>DiffviewOpen<CR>")
+map("n", "<leader>dc", "<cmd>DiffviewClose<CR>")
