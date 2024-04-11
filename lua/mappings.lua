@@ -67,6 +67,7 @@ map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
 map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 map("n", "gf", "<cmd>Lspsaga finder<CR>")
 map("n", "<leader>at", "<cmd>Lspsaga outline<CR>")
+map("n", "gi", vim.lsp.buf.implementation)
 
 -- diffview
 map("n", "<leader>do", "<cmd>DiffviewOpen<CR>")

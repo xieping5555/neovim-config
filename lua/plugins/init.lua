@@ -111,7 +111,14 @@ return {
             "nvim-treesitter/nvim-treesitter",
         },
         config = function()
-            require("go").setup()
+            require("go").setup {
+                floaterm = {
+                    position = "right",
+                    width = 0.45, -- width of float window if not auto
+                    height = 0.98, -- height of float window if not auto
+                    title_colors = "tokyo",
+                },
+            }
         end,
         event = { "CmdlineEnter" },
         ft = { "go", "gomod" },
