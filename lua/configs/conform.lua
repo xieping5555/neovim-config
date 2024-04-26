@@ -1,9 +1,17 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        go = { "goimports" },
+        go = { "goimports", "golines" },
         -- css = { "prettier" },
         -- html = { "prettier" },
+    },
+
+    formatters = {
+        golines = {
+            inherit = false,
+            command = "golines",
+            args = { "--max-len", 120 },
+        },
     },
 
     format_on_save = {

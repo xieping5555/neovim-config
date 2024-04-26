@@ -118,10 +118,20 @@ return {
                     height = 0.98, -- height of float window if not auto
                     title_colors = "tokyo",
                 },
+                lsp_inlay_hints = {
+                    enable = false,
+                },
             }
         end,
         event = { "CmdlineEnter" },
         ft = { "go", "gomod" },
         build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+    },
+    {
+        "nvim-pack/nvim-spectre",
+        config = function()
+            require("spectre").setup()
+        end,
+        lazy = false,
     },
 }

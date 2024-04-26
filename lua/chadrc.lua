@@ -5,14 +5,14 @@
 local M = {}
 
 M.ui = {
-    theme = "decay",
+    theme = "rosepine",
 
     -- hl_override = {
     -- 	Comment = { italic = true },
     -- 	["@comment"] = { italic = true },
     -- },
     cmp = {
-        style = "atom_colored",
+        style = "default",
     },
 
     lsp = {
