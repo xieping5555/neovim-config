@@ -1,7 +1,7 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        go = { "goimports", "golines" },
+        go = { "goimports" },
         -- css = { "prettier" },
         -- html = { "prettier" },
     },
@@ -10,7 +10,7 @@ local options = {
         golines = {
             inherit = false,
             command = "golines",
-            args = { "--max-len", 120 },
+            args = { "--max-len", 140 },
         },
     },
 
