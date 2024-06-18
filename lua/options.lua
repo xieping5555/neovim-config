@@ -18,7 +18,9 @@ o.autoindent = true
 -- 开启真彩配置
 o.termguicolors = true
 -- 突出显示当前行
-o.cursorline = false
+o.cursorline = true
+-- 突出显示当前列
+o.cursorcolumn = true
 -- 显示括号匹配
 o.showmatch = true
 -- 搜索忽略大小写

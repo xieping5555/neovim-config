@@ -72,3 +72,6 @@ map("n", "gi", vim.lsp.buf.implementation)
 -- diffview
 map("n", "<leader>do", "<cmd>DiffviewOpen<CR>")
 map("n", "<leader>dc", "<cmd>DiffviewClose<CR>")
+
+-- telescope
+map("n", "<leader>fr", "<cmd>lua require('telescope').extensions.recent_files.pick()<CR>")

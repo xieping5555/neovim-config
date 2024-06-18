@@ -1,3 +1,5 @@
+local overrides = require "configs.overrides"
+
 return {
     {
         "stevearc/conform.nvim",
@@ -5,6 +7,7 @@ return {
         config = function()
             require "configs.conform"
         end,
+        lazy = false,
     },
 
     -- These are some examples, uncomment them if you want to see them work!
@@ -133,5 +136,35 @@ return {
             require("spectre").setup()
         end,
         lazy = false,
+    },
+    {
+        "https://code.byted.org/chenjiaqi.cposture/codeverse.vim.git",
+        dependencies = {
+            "hrsh7th/nvim-cmp",
+        },
+        config = function()
+            require("codeverse").setup {
+                codeverse_filetypes = {
+                    thrift = true,
+                },
+            }
+        end,
+        lazy = false,
+    },
+    {
+        "hrsh7th/nvim-cmp",
+        opts = overrides.cmp,
+    },
+    {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("Comment").setup()
+        end,
+    },
+    {
+        "smartpde/telescope-recent-files",
+        config = function()
+            require("telescope").load_extension "recent_files"
+        end,
     },
 }
