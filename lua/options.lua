@@ -20,7 +20,7 @@ o.termguicolors = true
 -- 突出显示当前行
 o.cursorline = true
 -- 突出显示当前列
-o.cursorcolumn = true
+o.cursorcolumn = false
 -- 显示括号匹配
 o.showmatch = true
 -- 搜索忽略大小写

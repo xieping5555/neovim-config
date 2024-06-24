@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-    theme = "ashes",
+    theme = "decay",
 
     -- hl_override = {
     -- 	Comment = { italic = true },
@@ -27,6 +27,10 @@ M.ui = {
 
     statusline = {
         theme = "default",
+    },
+
+    tabufline = {
+        show_numbers = true,
     },
 }
 

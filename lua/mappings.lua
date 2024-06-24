@@ -75,3 +75,8 @@ map("n", "<leader>dc", "<cmd>DiffviewClose<CR>")
 
 -- telescope
 map("n", "<leader>fr", "<cmd>lua require('telescope').extensions.recent_files.pick()<CR>")
+
+-- sepctre
+map("n", "<leader>S", '<cmd>lua require("spectre").toggle()<CR>', {
+    desc = "Toggle Spectre",
+})

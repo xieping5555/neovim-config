@@ -167,4 +167,13 @@ return {
             require("telescope").load_extension "recent_files"
         end,
     },
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        opts = overrides.nvim_tree,
+    },
 }
