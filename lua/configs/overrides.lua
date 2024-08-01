@@ -28,7 +28,7 @@ M.cmp = {
         -- { name = "codeverse" },
     },
     experimental = {
-        ghost_text = true,
+        ghost_text = false,
     },
 }
 

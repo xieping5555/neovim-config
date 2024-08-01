@@ -46,6 +46,7 @@ return {
                 "prettier",
                 "tsserver",
                 "gopls",
+                "pylyzer",
             },
         },
     },
@@ -175,5 +176,9 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         opts = overrides.nvim_tree,
+    },
+    {
+        "ggandor/leap.nvim",
+        lazy = false,
     },
 }

@@ -80,3 +80,7 @@ map("n", "<leader>fr", "<cmd>lua require('telescope').extensions.recent_files.pi
 map("n", "<leader>S", '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre",
 })
+
+-- leap
+map({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+map({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
