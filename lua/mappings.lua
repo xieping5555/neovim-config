@@ -84,3 +84,11 @@ map("n", "<leader>S", '<cmd>lua require("spectre").toggle()<CR>', {
 -- leap
 map({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
 map({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
+
+-- goimpl
+map(
+    "n",
+    "<leader>im",
+    [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]],
+    { noremap = true, silent = true }
+)
