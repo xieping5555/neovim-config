@@ -4,19 +4,16 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
+M.base46 = {
     theme = "ashes",
 
     -- hl_override = {
     -- 	Comment = { italic = true },
     -- 	["@comment"] = { italic = true },
     -- },
-    cmp = {
-        style = "atom_colored",
-    },
 
     lsp = {
-        signature = false,
+        signature = true,
     },
 
     transparency = false,
@@ -32,6 +29,16 @@ M.ui = {
     tabufline = {
         show_numbers = true,
     },
+}
+
+M.ui = {
+    cmp = {
+        style = "atom_colored",
+    },
+}
+
+M.lsp = {
+    signature = true,
 }
 
 return M
