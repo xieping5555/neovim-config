@@ -5,18 +5,18 @@
 local M = {}
 
 M.base46 = {
-    theme = "ashes",
+    theme = "decay",
 
     -- hl_override = {
     -- 	Comment = { italic = true },
     -- 	["@comment"] = { italic = true },
     -- },
+}
 
-    lsp = {
-        signature = true,
+M.ui = {
+    cmp = {
+        style = "atom_colored",
     },
-
-    transparency = false,
 
     nvdash = {
         load_on_startup = false,
@@ -29,16 +29,6 @@ M.base46 = {
     tabufline = {
         show_numbers = true,
     },
-}
-
-M.ui = {
-    cmp = {
-        style = "atom_colored",
-    },
-}
-
-M.lsp = {
-    signature = true,
 }
 
 return M

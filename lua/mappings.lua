@@ -55,7 +55,7 @@ map("n", "<leader>c", "<cmd>NvimTreeFocus<CR>", { desc = "Nvimtree Focus window"
 map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 map("n", "<leader>gr", "<cmd>Lspsaga rename<CR>")
 map("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
-map("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+-- map("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 map("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
 map("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>")
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>")
@@ -68,6 +68,7 @@ map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 map("n", "gf", "<cmd>Lspsaga finder<CR>")
 map("n", "<leader>at", "<cmd>Lspsaga outline<CR>")
 map("n", "gi", vim.lsp.buf.implementation)
+map("n", "gd", vim.lsp.buf.definition)
 
 -- diffview
 map("n", "<leader>do", "<cmd>DiffviewOpen<CR>")
@@ -92,3 +93,16 @@ map(
     [[<cmd>lua require'telescope'.extensions.goimpl.goimpl{}<CR>]],
     { noremap = true, silent = true }
 )
+
+-- Keyboard users
+-- map("n", "<C-t>", function()
+--     require("menu").open "default"
+-- end, {})
+
+-- mouse users + nvimtree users!
+map("n", "<RightMouse>", function()
+    vim.cmd.exec '"normal! \\<RightMouse>"'
+
+    local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+    require("menu").open(options, { mouse = true })
+end, {})

@@ -9,14 +9,14 @@ return {
         end,
         lazy = false,
     },
-
     {
         "nvchad/ui",
         config = function()
             require "nvchad"
         end,
     },
-
+    { "nvzone/volt", lazy = true },
+    { "nvzone/menu", lazy = true },
     {
         "nvchad/base46",
         lazy = true,
@@ -32,6 +32,8 @@ return {
             require("nvchad.configs.lspconfig").defaults()
             require "configs.lspconfig"
         end,
+        opts = overrides.cmp,
+        -- dependencies = { "saghen/blink.cmp" },
     },
     {
         "nvimdev/lspsaga.nvim",
@@ -171,6 +173,51 @@ return {
         "hrsh7th/nvim-cmp",
         opts = overrides.cmp,
     },
+    -- {
+    --     "saghen/blink.cmp",
+    --     lazy = false, -- lazy loading handled internally
+    --     -- optional: provides snippets for the snippet source
+    --     dependencies = "rafamadriz/friendly-snippets",
+    --     -- use a release tag to download pre-built binaries
+    --     version = "v0.*",
+    --     -- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+    --     -- build = 'cargo build --release',
+    --     -- If you use nix, you can build from source using latest nightly rust with:
+    --     -- build = 'nix run .#build-plugin',
+    --
+    --     ---@module 'blink.cmp'
+    --     ---@type blink.cmp.Config
+    --     opts = {
+    --         -- 'default' for mappings similar to built-in completion
+    --         -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
+    --         -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
+    --         -- see the "default configuration" section below for full documentation on how to define
+    --         -- your own keymap.
+    --         keymap = { preset = "enter" },
+    --
+    --         appearance = {
+    --             -- Sets the fallback highlight groups to nvim-cmp's highlight groups
+    --             -- Useful for when your theme doesn't support blink.cmp
+    --             -- will be removed in a future release
+    --             use_nvim_cmp_as_default = true,
+    --             -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+    --             -- Adjusts spacing to ensure icons are aligned
+    --             nerd_font_variant = "mono",
+    --         },
+    --
+    --         -- default list of enabled providers defined so that you can extend it
+    --         -- elsewhere in your config, without redefining it, via `opts_extend`
+    --         sources = {
+    --             default = { "lsp", "path", "snippets", "buffer" },
+    --         },
+    --
+    --         -- experimental signature help support
+    --         signature = { enabled = true },
+    --     },
+    --     -- allows extending the providers array elsewhere in your config
+    --     -- without having to redefine it
+    --     opts_extend = { "sources.default" },
+    -- },
     {
         "numToStr/Comment.nvim",
         config = function()
@@ -208,5 +255,42 @@ return {
         config = function()
             require("telescope").load_extension "goimpl"
         end,
+    },
+    {
+        "folke/trouble.nvim",
+        cmd = "Trouble",
+        lazy = false,
+        keys = {
+            {
+                "<leader>xx",
+                "<cmd>Trouble diagnostics toggle<cr>",
+                desc = "Diagnostics (Trouble)",
+            },
+            {
+                "<leader>xX",
+                "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+                desc = "Buffer Diagnostics (Trouble)",
+            },
+            {
+                "<leader>cs",
+                "<cmd>Trouble symbols toggle focus=false<cr>",
+                desc = "Symbols (Trouble)",
+            },
+            {
+                "<leader>cl",
+                "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+                desc = "LSP Definitions / references / ... (Trouble)",
+            },
+            {
+                "<leader>xL",
+                "<cmd>Trouble loclist toggle<cr>",
+                desc = "Location List (Trouble)",
+            },
+            {
+                "<leader>xQ",
+                "<cmd>Trouble qflist toggle<cr>",
+                desc = "Quickfix List (Trouble)",
+            },
+        },
     },
 }
