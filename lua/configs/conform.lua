@@ -1,17 +1,19 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        go = { "goimports" },
+        go = { "goimports", "gofumpt" },
         -- css = { "prettier" },
         -- html = { "prettier" },
+        json = { "jq" },
     },
 
     formatters = {
-        golines = {
-            inherit = false,
-            command = "golines",
-            args = { "--max-len", 140 },
+        ["goimports-reviser"] = {
+            prepend_args = { "-rm-unused" },
         },
+        -- golines = {
+        --     prepend_args = { "--max-len=140" },
+        -- },
     },
 
     format_on_save = {

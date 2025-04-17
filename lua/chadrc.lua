@@ -5,7 +5,7 @@
 local M = {}
 
 M.base46 = {
-    theme = "chadracula",
+    theme = "ashes",
 
     -- hl_override = {
     -- 	Comment = { italic = true },
@@ -28,6 +28,24 @@ M.ui = {
 
     tabufline = {
         show_numbers = true,
+    },
+}
+
+M.lsp = {
+    signature = false,
+}
+
+M.mason = {
+    pkgs = {
+        "lua-language-server",
+        "stylua",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "tsserver",
+        "gopls",
+        "pylyzer",
+        "thriftls",
     },
 }
 
