@@ -113,3 +113,6 @@ map("n", "<C-p>", "<C-i>")
 -- Gitsigns
 map("n", "<leader>gb", "<cmd>Gitsigns blame<CR>", { desc = "Git blame" })
 map("n", "<leader>gl", "<cmd>Gitsigns blame_line<CR>", { desc = "Git blame line" })
+
+-- zen mode
+map("n", "<leader>z", "<cmd>ZenMode<CR>", { desc = "Toggle zen mode" })

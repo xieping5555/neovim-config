@@ -194,4 +194,37 @@ return {
             require("telescope").load_extension "goimpl"
         end,
     },
+    {
+        "anuvyklack/windows.nvim",
+        requires = {
+            "anuvyklack/middleclass",
+            "anuvyklack/animation.nvim",
+        },
+        lazy = false,
+        config = function()
+            vim.o.winwidth = 10
+            vim.o.winminwidth = 10
+            vim.o.equalalways = false
+            require("windows").setup()
+        end,
+    },
+    -- Lua
+    {
+        "folke/zen-mode.nvim",
+        lazy = false,
+        config = function()
+            require("zen-mode").setup {
+                window = {
+                    width = 0.8,
+                },
+                plugins = {
+                    twilight = { enable = true },
+                    kitty = {
+                        enabled = true,
+                        font = "+4",
+                    },
+                },
+            }
+        end,
+    },
 }

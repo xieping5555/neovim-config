@@ -1,14 +1,14 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        go = { "goimports", "gofumpt" },
+        go = { "goimports" },
         -- css = { "prettier" },
         -- html = { "prettier" },
         json = { "jq" },
     },
 
     formatters = {
-        ["goimports-reviser"] = {
+        ["goimports"] = {
             prepend_args = { "-rm-unused" },
         },
         -- golines = {
