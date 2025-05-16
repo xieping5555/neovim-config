@@ -34,7 +34,7 @@ require("lazy").setup({
 
     { import = "plugins" },
 
-    { import = "nvchad.blink.lazyspec" },
+    -- { import = "nvchad.blink.lazyspec" },
 }, lazy_config)
 
 -- load theme

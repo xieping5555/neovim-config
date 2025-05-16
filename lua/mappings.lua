@@ -38,6 +38,9 @@ map("n", "<C-Down>", ":resize +2<CR>")
 map("n", "<C-Left>", ":vertical resize -2<CR>")
 map("n", "<C-Right>", ":vertical resize +2<CR>")
 map("n", "<C-k>", "i<CR><ESC>")
+map("n", "<leader>d", '"_dd')
+map("v", "<leader>d", '"_d')
+map("n", "<leader>x", '"_x')
 
 -- lazygit
 map("n", "<leader>gg", "<cmd>LazyGit<CR>")
